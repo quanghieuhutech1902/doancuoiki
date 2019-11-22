@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a7fc8ed12a20435aa0a21ff21e965822" Name="Diagram1" ZoomLevel="110">
+        <EntityTypeShape EntityType="WebCayCanhModel.CHAMSOC" Width="1.5" PointX="13" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.CHINHSACH" Width="1.5" PointX="8" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.CTHD" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.DMCHAMSOC" Width="1.5" PointX="10.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.DMCHINHSACH" Width="1.5" PointX="5.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.DMKM" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.DMSP" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.DMTT" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.FOOTER" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.GIOITHIEU" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.HINHANH" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.HOADON" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.HUONGDAN" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.KHACHHANG" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.KHUYENMAI" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.LIENHE" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.NGUOIDUNG" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.PHANHOI" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.PTTT" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.SANPHAM" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.Slide" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.sysdiagrams" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebCayCanhModel.TINTUC" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="WebCayCanhModel.FK_CHAMSOC_DMCHAMSOC" ManuallyRouted="false" />
+        <AssociationConnector Association="WebCayCanhModel.FK_CHINHSACH_DMCHINHSACH" ManuallyRouted="false" />
+        <AssociationConnector Association="WebCayCanhModel.FK_HOADON_CTHD" ManuallyRouted="false" />
+        <AssociationConnector Association="WebCayCanhModel.FK_KHUYENMAI_DMKM" ManuallyRouted="false" />
+        <AssociationConnector Association="WebCayCanhModel.FK_SANPHAM_DMSP" ManuallyRouted="false" />
+        <AssociationConnector Association="WebCayCanhModel.FK_TINTUC_DMTT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

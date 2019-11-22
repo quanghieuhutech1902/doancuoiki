@@ -1,0 +1,151 @@
+﻿@using DoAn.Models;
+@model List<SANPHAM>
+
+<div class="owl-carousel owl-theme owl-4-items " style="max-height: 500px; overflow-y: hidden;">
+    @foreach (var item in Model)
+    {
+        <div class="">
+
+            <div class="wrap-item-loop-sp bg_white ">
+
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+
+                        <img src="@item.HinhAnh"  />
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+
+                        <a href="" title="Bộ Đĩa Tự Tưới"><h3 class="clear tit-loop-sp">@item.TenSP</h3></a>
+                        <span class="price font18 text-danger">@item.Gia <ins>₫</ins></span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+
+
+@*<div class="owl-carousel owl-theme owl-4-items " style="max-height: 500px; overflow-y: hidden;">
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/bo-dia-tu-tuoi/" title="Bộ Đĩa Tự Tưới">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi-255x255.jpg" class="w100 transition wp-post-image" alt="bo-dia-tu-tuoi" srcset="https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/09/bo-dia-tu-tuoi.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/bo-dia-tu-tuoi/" title="Bộ Đĩa Tự Tưới"><h3 class="clear tit-loop-sp">Bộ Đĩa Tự Tưới</h3></a>
+                        <span class="price font18 text-danger">15.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-bach-ma-hoang-tu/" title="Cây Bạch Mã Hoàng Tử">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu-255x255.jpg" class="w100 transition wp-post-image" alt="cay-bach-ma-hoang-tu" srcset="https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/09/cay-bach-ma-hoang-tu.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-bach-ma-hoang-tu/" title="Cây Bạch Mã Hoàng Tử"><h3 class="clear tit-loop-sp">Cây Bạch Mã Hoàng Tử</h3></a>
+                        <span class="price font18 text-danger">449.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-ma-non/" title="Cây Mạ Non">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non-255x255.jpg" class="w100 transition wp-post-image" alt="cay-ma-non" srcset="https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-ma-non.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-ma-non/" title="Cây Mạ Non"><h3 class="clear tit-loop-sp">Cây Mạ Non</h3></a>
+                        <span class="price font18 text-danger">99.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-hoa-thien-ly/" title="Cây Hoa Thiên Lý">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly-255x255.png" class="w100 transition wp-post-image" alt="cay-hoa-thien-ly" srcset="https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly-255x255.png 255w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly-150x150.png 150w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly-400x400.png 400w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly-768x768.png 768w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly-83x83.png 83w, https://webcaycanh.com/wp-content/uploads/2019/08/cay-hoa-thien-ly.png 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-hoa-thien-ly/" title="Cây Hoa Thiên Lý"><h3 class="clear tit-loop-sp">Cây Hoa Thiên Lý</h3></a>
+                        <span class="price font18 text-danger">219.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-hoa-su-quan-tu/" title="Cây Hoa Sử Quân Tử">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu-255x255.jpg" class="w100 transition wp-post-image" alt="cay-hoa-su-quan-tu" srcset="https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-su-quan-tu.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-hoa-su-quan-tu/" title="Cây Hoa Sử Quân Tử"><h3 class="clear tit-loop-sp">Cây Hoa Sử Quân Tử</h3></a>
+                        <span class="price font18 text-danger">219.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-hoa-tigon/" title="Cây Hoa Tigon">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon-255x255.jpg" class="w100 transition wp-post-image" alt="cay-hoa-leo-tigon" srcset="https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-hoa-leo-tigon.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-hoa-tigon/" title="Cây Hoa Tigon"><h3 class="clear tit-loop-sp">Cây Hoa Tigon</h3></a>
+                        <span class="price font18 text-danger">149.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-co-lan-chi/" title="Cây Cỏ Lan Chi">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep-255x255.jpg" class="w100 transition wp-post-image" alt="cay-co-lan-chi-dep" srcset="https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-co-lan-chi-dep.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-co-lan-chi/" title="Cây Cỏ Lan Chi"><h3 class="clear tit-loop-sp">Cây Cỏ Lan Chi</h3></a>
+                        <span class="price font18 text-danger">149.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="wrap-item-loop-sp bg_white ">
+                <div class="item-loop-sp mb-4">
+                    <div class="img1 photo overhiden marb10 ">
+                        <a href="https://webcaycanh.com/cay-chuoi-re-quat/" title="Cây Chuối Rẻ Quạt">
+                            <img src="https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat-255x255.jpg" class="w100 transition wp-post-image" alt="cay-chuoi-re-quat" srcset="https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat-255x255.jpg 255w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat-150x150.jpg 150w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat-400x400.jpg 400w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat-768x768.jpg 768w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat-83x83.jpg 83w, https://webcaycanh.com/wp-content/uploads/2019/07/cay-chuoi-re-quat.jpg 900w" sizes="(max-width: 255px) 100vw, 255px" />
+                        </a>
+                    </div>
+                    <div class="transition w100 wr1 text-center ">
+                        <a href="https://webcaycanh.com/cay-chuoi-re-quat/" title="Cây Chuối Rẻ Quạt"><h3 class="clear tit-loop-sp">Cây Chuối Rẻ Quạt</h3></a>
+                        <span class="price font18 text-danger">549.000 <ins>₫</ins></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@

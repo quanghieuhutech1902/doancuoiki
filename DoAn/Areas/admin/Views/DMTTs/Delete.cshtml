@@ -1,0 +1,65 @@
+﻿@model DoAn.Models.DMTT
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DMTT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDMTT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDMTT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TuKhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TuKhoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TieuDeSeo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDeSeo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

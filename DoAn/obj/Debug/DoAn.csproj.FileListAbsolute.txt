@@ -1,0 +1,328 @@
+D:\HocCode\DoAn\DoAn\bin\ApplicationInsights.config
+D:\HocCode\DoAn\DoAn\bin\roslyn\csc.exe
+D:\HocCode\DoAn\DoAn\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HocCode\DoAn\DoAn\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HocCode\DoAn\DoAn\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HocCode\DoAn\DoAn\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HocCode\DoAn\DoAn\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HocCode\DoAn\DoAn\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HocCode\DoAn\DoAn\bin\roslyn\System.Collections.Immutable.dll
+D:\HocCode\DoAn\DoAn\bin\roslyn\System.Reflection.Metadata.dll
+D:\HocCode\DoAn\DoAn\bin\roslyn\vbc.exe
+D:\HocCode\DoAn\DoAn\bin\roslyn\VBCSCompiler.exe
+D:\HocCode\DoAn\DoAn\bin\roslyn\VBCSCompiler.exe.config
+D:\HocCode\DoAn\DoAn\bin\DoAn.dll.config
+D:\HocCode\DoAn\DoAn\bin\DoAn.dll
+D:\HocCode\DoAn\DoAn\bin\DoAn.pdb
+D:\HocCode\DoAn\DoAn\bin\Antlr3.Runtime.dll
+D:\HocCode\DoAn\DoAn\bin\EntityFramework.dll
+D:\HocCode\DoAn\DoAn\bin\EntityFramework.SqlServer.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.Agent.Intercept.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.DependencyCollector.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.Web.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.WindowsServer.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.ApplicationInsights.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AspNet.Identity.Core.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Cookies.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Facebook.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Google.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Twitter.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Web.Infrastructure.dll
+D:\HocCode\DoAn\DoAn\bin\Newtonsoft.Json.dll
+D:\HocCode\DoAn\DoAn\bin\Owin.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.Helpers.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.Mvc.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.Optimization.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.Razor.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.WebPages.Deployment.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.WebPages.dll
+D:\HocCode\DoAn\DoAn\bin\System.Web.WebPages.Razor.dll
+D:\HocCode\DoAn\DoAn\bin\WebGrease.dll
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.DependencyCollector.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.Web.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AI.WindowsServer.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.ApplicationInsights.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.Helpers.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.Mvc.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.Optimization.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.Razor.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.WebPages.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.WebPages.Deployment.xml
+D:\HocCode\DoAn\DoAn\bin\System.Web.WebPages.Razor.xml
+D:\HocCode\DoAn\DoAn\bin\Antlr3.Runtime.pdb
+D:\HocCode\DoAn\DoAn\bin\Newtonsoft.Json.xml
+D:\HocCode\DoAn\DoAn\bin\EntityFramework.xml
+D:\HocCode\DoAn\DoAn\bin\EntityFramework.SqlServer.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AspNet.Identity.Core.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Facebook.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Cookies.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Google.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.Twitter.xml
+D:\HocCode\DoAn\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HocCode\DoAn\DoAn\obj\Debug\DoAn.csprojResolveAssemblyReference.cache
+D:\HocCode\DoAn\DoAn\obj\Debug\DoAn.dll
+D:\HocCode\DoAn\DoAn\obj\Debug\DoAn.pdb
+D:\HocCode\DoAn - Copy\DoAn\bin\ApplicationInsights.config
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\csc.exe
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\System.Collections.Immutable.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\System.Reflection.Metadata.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\vbc.exe
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\VBCSCompiler.exe
+D:\HocCode\DoAn - Copy\DoAn\bin\roslyn\VBCSCompiler.exe.config
+D:\HocCode\DoAn - Copy\DoAn\bin\DoAn.dll.config
+D:\HocCode\DoAn - Copy\DoAn\bin\DoAn.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\DoAn.pdb
+D:\HocCode\DoAn - Copy\DoAn\bin\Antlr3.Runtime.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\EntityFramework.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\EntityFramework.SqlServer.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.Agent.Intercept.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.DependencyCollector.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.Web.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.WindowsServer.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.ApplicationInsights.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AspNet.Identity.Core.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Cookies.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Facebook.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Google.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Twitter.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Web.Infrastructure.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Newtonsoft.Json.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Owin.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Helpers.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Mvc.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Optimization.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Razor.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.WebPages.Deployment.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.WebPages.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.WebPages.Razor.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\WebGrease.dll
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.DependencyCollector.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.Web.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AI.WindowsServer.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.ApplicationInsights.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Helpers.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Mvc.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Optimization.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.Razor.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.WebPages.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.WebPages.Deployment.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\System.Web.WebPages.Razor.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Antlr3.Runtime.pdb
+D:\HocCode\DoAn - Copy\DoAn\bin\Newtonsoft.Json.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\EntityFramework.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\EntityFramework.SqlServer.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AspNet.Identity.Core.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Facebook.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Cookies.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Google.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.Twitter.xml
+D:\HocCode\DoAn - Copy\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HocCode\DoAn - Copy\DoAn\obj\Debug\DoAn.csprojResolveAssemblyReference.cache
+D:\HocCode\DoAn - Copy\DoAn\obj\Debug\DoAn.dll
+D:\HocCode\DoAn - Copy\DoAn\obj\Debug\DoAn.pdb
+D:\HocCode\test\DoAn\bin\ApplicationInsights.config
+D:\HocCode\test\DoAn\bin\roslyn\csc.exe
+D:\HocCode\test\DoAn\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HocCode\test\DoAn\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HocCode\test\DoAn\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HocCode\test\DoAn\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HocCode\test\DoAn\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HocCode\test\DoAn\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HocCode\test\DoAn\bin\roslyn\System.Collections.Immutable.dll
+D:\HocCode\test\DoAn\bin\roslyn\System.Reflection.Metadata.dll
+D:\HocCode\test\DoAn\bin\roslyn\vbc.exe
+D:\HocCode\test\DoAn\bin\roslyn\VBCSCompiler.exe
+D:\HocCode\test\DoAn\bin\roslyn\VBCSCompiler.exe.config
+D:\HocCode\test\DoAn\bin\DoAn.dll.config
+D:\HocCode\test\DoAn\bin\DoAn.dll
+D:\HocCode\test\DoAn\bin\DoAn.pdb
+D:\HocCode\test\DoAn\bin\Antlr3.Runtime.dll
+D:\HocCode\test\DoAn\bin\EntityFramework.dll
+D:\HocCode\test\DoAn\bin\EntityFramework.SqlServer.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.Agent.Intercept.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.DependencyCollector.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.Web.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.WindowsServer.dll
+D:\HocCode\test\DoAn\bin\Microsoft.ApplicationInsights.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AspNet.Identity.Core.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\HocCode\test\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Cookies.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Facebook.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Google.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Twitter.dll
+D:\HocCode\test\DoAn\bin\Microsoft.Web.Infrastructure.dll
+D:\HocCode\test\DoAn\bin\Newtonsoft.Json.dll
+D:\HocCode\test\DoAn\bin\Owin.dll
+D:\HocCode\test\DoAn\bin\System.Web.Helpers.dll
+D:\HocCode\test\DoAn\bin\System.Web.Mvc.dll
+D:\HocCode\test\DoAn\bin\System.Web.Optimization.dll
+D:\HocCode\test\DoAn\bin\System.Web.Razor.dll
+D:\HocCode\test\DoAn\bin\System.Web.WebPages.Deployment.dll
+D:\HocCode\test\DoAn\bin\System.Web.WebPages.dll
+D:\HocCode\test\DoAn\bin\System.Web.WebPages.Razor.dll
+D:\HocCode\test\DoAn\bin\WebGrease.dll
+D:\HocCode\test\DoAn\bin\Microsoft.AI.DependencyCollector.xml
+D:\HocCode\test\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\HocCode\test\DoAn\bin\Microsoft.AI.Web.xml
+D:\HocCode\test\DoAn\bin\Microsoft.AI.WindowsServer.xml
+D:\HocCode\test\DoAn\bin\Microsoft.ApplicationInsights.xml
+D:\HocCode\test\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HocCode\test\DoAn\bin\System.Web.Helpers.xml
+D:\HocCode\test\DoAn\bin\System.Web.Mvc.xml
+D:\HocCode\test\DoAn\bin\System.Web.Optimization.xml
+D:\HocCode\test\DoAn\bin\System.Web.Razor.xml
+D:\HocCode\test\DoAn\bin\System.Web.WebPages.xml
+D:\HocCode\test\DoAn\bin\System.Web.WebPages.Deployment.xml
+D:\HocCode\test\DoAn\bin\System.Web.WebPages.Razor.xml
+D:\HocCode\test\DoAn\bin\Antlr3.Runtime.pdb
+D:\HocCode\test\DoAn\bin\Newtonsoft.Json.xml
+D:\HocCode\test\DoAn\bin\EntityFramework.xml
+D:\HocCode\test\DoAn\bin\EntityFramework.SqlServer.xml
+D:\HocCode\test\DoAn\bin\Microsoft.AspNet.Identity.Core.xml
+D:\HocCode\test\DoAn\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\HocCode\test\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Facebook.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Cookies.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Google.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.Twitter.xml
+D:\HocCode\test\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HocCode\test\DoAn\obj\Debug\DoAn.csprojResolveAssemblyReference.cache
+D:\HocCode\test\DoAn\obj\Debug\DoAn.dll
+D:\HocCode\test\DoAn\obj\Debug\DoAn.pdb
+D:\HocCode\test - 1\DoAn\bin\ApplicationInsights.config
+D:\HocCode\test - 1\DoAn\bin\roslyn\csc.exe
+D:\HocCode\test - 1\DoAn\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HocCode\test - 1\DoAn\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HocCode\test - 1\DoAn\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HocCode\test - 1\DoAn\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HocCode\test - 1\DoAn\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HocCode\test - 1\DoAn\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HocCode\test - 1\DoAn\bin\roslyn\System.Collections.Immutable.dll
+D:\HocCode\test - 1\DoAn\bin\roslyn\System.Reflection.Metadata.dll
+D:\HocCode\test - 1\DoAn\bin\roslyn\vbc.exe
+D:\HocCode\test - 1\DoAn\bin\roslyn\VBCSCompiler.exe
+D:\HocCode\test - 1\DoAn\bin\roslyn\VBCSCompiler.exe.config
+D:\HocCode\test - 1\DoAn\bin\DoAn.dll.config
+D:\HocCode\test - 1\DoAn\bin\DoAn.dll
+D:\HocCode\test - 1\DoAn\bin\DoAn.pdb
+D:\HocCode\test - 1\DoAn\bin\Antlr3.Runtime.dll
+D:\HocCode\test - 1\DoAn\bin\EntityFramework.dll
+D:\HocCode\test - 1\DoAn\bin\EntityFramework.SqlServer.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.Agent.Intercept.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.DependencyCollector.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.Web.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.WindowsServer.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.ApplicationInsights.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AspNet.Identity.Core.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Cookies.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Facebook.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Google.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Twitter.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Web.Infrastructure.dll
+D:\HocCode\test - 1\DoAn\bin\Newtonsoft.Json.dll
+D:\HocCode\test - 1\DoAn\bin\Owin.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.Helpers.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.Mvc.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.Optimization.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.Razor.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.WebPages.Deployment.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.WebPages.dll
+D:\HocCode\test - 1\DoAn\bin\System.Web.WebPages.Razor.dll
+D:\HocCode\test - 1\DoAn\bin\WebGrease.dll
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.DependencyCollector.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.Web.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AI.WindowsServer.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.ApplicationInsights.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.Helpers.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.Mvc.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.Optimization.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.Razor.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.WebPages.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.WebPages.Deployment.xml
+D:\HocCode\test - 1\DoAn\bin\System.Web.WebPages.Razor.xml
+D:\HocCode\test - 1\DoAn\bin\Antlr3.Runtime.pdb
+D:\HocCode\test - 1\DoAn\bin\Newtonsoft.Json.xml
+D:\HocCode\test - 1\DoAn\bin\EntityFramework.xml
+D:\HocCode\test - 1\DoAn\bin\EntityFramework.SqlServer.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AspNet.Identity.Core.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Facebook.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Cookies.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Google.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.Twitter.xml
+D:\HocCode\test - 1\DoAn\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HocCode\test - 1\DoAn\obj\Debug\DoAn.csprojResolveAssemblyReference.cache
+D:\HocCode\test - 1\DoAn\obj\Debug\DoAn.dll
+D:\HocCode\test - 1\DoAn\obj\Debug\DoAn.pdb

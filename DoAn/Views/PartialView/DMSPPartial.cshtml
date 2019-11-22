@@ -1,0 +1,20 @@
+﻿@using DoAn.Models;
+@model List<DMSP>
+
+
+
+
+<div class="bg_xanh6 cl_white btn-nav-prod text-uppercase"><i class="fa fa-bars font18" aria-hidden="true"></i><span>Danh mục sản phẩm</span></div>
+
+
+<ul id="nav-prod" class="nav-prod list-inline dropdown-menu show font14">
+    @foreach (var item in Model)
+    {
+        <li id="menu-item-6138" class="menu-item menu-item-type-taxonomy menu-item-object-tax_cay menu-item-6138"><a href="/">@item.TenLoai</a></li>
+    }
+</ul>
+
+
+
+
+

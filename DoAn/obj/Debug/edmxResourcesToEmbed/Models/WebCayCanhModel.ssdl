@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebCayCanhModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CHAMSOC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenCachChamSoc" Type="nvarchar" MaxLength="100" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="CS_ID" Type="int" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CHINHSACH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenChinhSach" Type="nvarchar" MaxLength="100" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="CHNHSACH_ID" Type="int" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CTHD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SanPham" Type="int" />
+    <Property Name="KhachHang" Type="int" />
+  </EntityType>
+  <EntityType Name="DMCHAMSOC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDM" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tukhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DMCHINHSACH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDM" Type="nvarchar" MaxLength="100" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DMKM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenKM" Type="nvarchar" MaxLength="100" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DMSP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoai" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="XoaTam" Type="bit" />
+  </EntityType>
+  <EntityType Name="DMTT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDMTT" Type="nvarchar" MaxLength="100" />
+    <Property Name="NgayCN" Type="datetime" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FOOTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TinhTrang" Type="bit" />
+  </EntityType>
+  <EntityType Name="GIOITHIEU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten" Type="nchar" MaxLength="10" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="HinhAnh" Type="image" />
+  </EntityType>
+  <EntityType Name="HINHANH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThoiGian" Type="datetime" />
+    <Property Name="TongTien" Type="int" />
+    <Property Name="TinhTrang" Type="bit" />
+    <Property Name="NhanVien" Type="int" />
+    <Property Name="KhachHang" Type="int" />
+    <Property Name="CTHD_ID" Type="int" />
+    <Property Name="PTTT" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="HUONGDAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="100" />
+    <Property Name="DiaChi" Type="nvarchar(max)" />
+    <Property Name="Gmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Diem" Type="int" />
+    <Property Name="SDT" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="KHUYENMAI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenKM" Type="nvarchar" MaxLength="100" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="MDKM_ID" Type="int" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LIENHE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="100" />
+    <Property Name="ChucVu" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PHANHOI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoaDonId" Type="int" />
+    <Property Name="Noidung" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PTTT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenPTTT" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSP" Type="nvarchar" MaxLength="100" />
+    <Property Name="SoLuong" Type="nchar" MaxLength="10" />
+    <Property Name="TinhTrang" Type="bit" />
+    <Property Name="HinhAnh" Type="nchar" MaxLength="10" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="200" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="Gia" Type="int" />
+    <Property Name="GiaKM" Type="nchar" MaxLength="10" />
+    <Property Name="DMSP_ID" Type="int" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThuTu" Type="int" />
+    <Property Name="Link" Type="nvarchar" MaxLength="50" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+    <Property Name="TIeuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="TinhTrang" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TINTUC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTinTuc" Type="nvarchar" MaxLength="100" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="HinhAnh" Type="image" />
+    <Property Name="DMTT_ID" Type="int" Nullable="false" />
+    <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_CHAMSOC_DMCHAMSOC">
+    <End Role="DMCHAMSOC" Type="Self.DMCHAMSOC" Multiplicity="0..1" />
+    <End Role="CHAMSOC" Type="Self.CHAMSOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DMCHAMSOC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CHAMSOC">
+        <PropertyRef Name="CS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHINHSACH_DMCHINHSACH">
+    <End Role="DMCHINHSACH" Type="Self.DMCHINHSACH" Multiplicity="0..1" />
+    <End Role="CHINHSACH" Type="Self.CHINHSACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DMCHINHSACH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CHINHSACH">
+        <PropertyRef Name="CHNHSACH_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADON_CTHD">
+    <End Role="CTHD" Type="Self.CTHD" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CTHD">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="CTHD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KHUYENMAI_DMKM">
+    <End Role="DMKM" Type="Self.DMKM" Multiplicity="0..1" />
+    <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DMKM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KHUYENMAI">
+        <PropertyRef Name="MDKM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SANPHAM_DMSP">
+    <End Role="DMSP" Type="Self.DMSP" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DMSP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="DMSP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TINTUC_DMTT">
+    <End Role="DMTT" Type="Self.DMTT" Multiplicity="1" />
+    <End Role="TINTUC" Type="Self.TINTUC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DMTT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TINTUC">
+        <PropertyRef Name="DMTT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebCayCanhModelStoreContainer">
+    <EntitySet Name="CHAMSOC" EntityType="Self.CHAMSOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHINHSACH" EntityType="Self.CHINHSACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTHD" EntityType="Self.CTHD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DMCHAMSOC" EntityType="Self.DMCHAMSOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DMCHINHSACH" EntityType="Self.DMCHINHSACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DMKM" EntityType="Self.DMKM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DMSP" EntityType="Self.DMSP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DMTT" EntityType="Self.DMTT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FOOTER" EntityType="Self.FOOTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GIOITHIEU" EntityType="Self.GIOITHIEU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HINHANH" EntityType="Self.HINHANH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HUONGDAN" EntityType="Self.HUONGDAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHUYENMAI" EntityType="Self.KHUYENMAI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIENHE" EntityType="Self.LIENHE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHANHOI" EntityType="Self.PHANHOI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTTT" EntityType="Self.PTTT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TINTUC" EntityType="Self.TINTUC" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CHAMSOC_DMCHAMSOC" Association="Self.FK_CHAMSOC_DMCHAMSOC">
+      <End Role="DMCHAMSOC" EntitySet="DMCHAMSOC" />
+      <End Role="CHAMSOC" EntitySet="CHAMSOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHINHSACH_DMCHINHSACH" Association="Self.FK_CHINHSACH_DMCHINHSACH">
+      <End Role="DMCHINHSACH" EntitySet="DMCHINHSACH" />
+      <End Role="CHINHSACH" EntitySet="CHINHSACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADON_CTHD" Association="Self.FK_HOADON_CTHD">
+      <End Role="CTHD" EntitySet="CTHD" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHUYENMAI_DMKM" Association="Self.FK_KHUYENMAI_DMKM">
+      <End Role="DMKM" EntitySet="DMKM" />
+      <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SANPHAM_DMSP" Association="Self.FK_SANPHAM_DMSP">
+      <End Role="DMSP" EntitySet="DMSP" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TINTUC_DMTT" Association="Self.FK_TINTUC_DMTT">
+      <End Role="DMTT" EntitySet="DMTT" />
+      <End Role="TINTUC" EntitySet="TINTUC" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

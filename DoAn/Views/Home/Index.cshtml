@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "~/Views/Layout/NguoiDungLayout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+<div class="clear h30 destop"></div>
+<div class="container">
+    <div class="text-center bg1 box" style="margin-bottom: 15px;">
+        <h1 class="font30"><i class="i-hand"></i><span class="full text-center pb-3">Web cây cảnh</span></h1>
+        <div class="clearfix h20"></div>
+        <div class="d-inline text-center cl_xanh6 font20 tieuchi-3"><span class="">Bán cây cảnh</span><span class="">Chăm sóc cây</span><span class="">Tư vấn thiết kế</span></div>
+    </div>
+    <div class="text-center box box-prod">
+        <h2 class="tit-box cl_xanh6">
+            cây cảnh mới
+        </h2>
+        <div class="clearfix"></div>
+     @Html.Action("CayMoiPartial","PartialView")
+    </div>
+    <div class="clearfix"></div>
+    <div class="text-center box box-tax">
+        <h2 class="tit-box cl_xanh6">
+            danh mục cây cảnh
+        </h2>
+        <div class="clearfix"></div>
+      @Html.Action("DMCayPartial","PartialView")
+    </div>
+</div><!-- /.container -->
+
+<section class="parallax sec-chinhanh relative pt-5 pb-5 cl_white" style="background-image: url(https://webcaycanh.com/wp-content/themes/cay/imgs/bg_chinhanh.jpg);">
+    <div class="container text-center relative">
+        <div class="tit-box tit-box-no-bg tit-border-b">
+            CHÚNG TÔI CÓ CƠ SỞ TẠI 2 MIỀN ĐẤT NƯỚC
+        </div>
+        <div class="row">
+            <div class="col-sm text-center item-chinhanh mt-3">
+                <div class="font23 UTMHelvetIns tit-chinhanh tit-border-b relative text-uppercase mb-3">Chi Nhánh Hà Nội</div>
+                <div class="pt-3 pb-3">
+                    Số 60 - Ngõ 235 <br />
+                    Yên Hòa - Quận Cầu Giấy - Hà Nội
+                </div>
+                <div class="font23 UTMHelvetIns tit-chinhanh text-uppercase">0988 833 653</div>
+            </div>
+            <div class="col-sm text-center item-chinhanh mt-3">
+                <div class="font23 UTMHelvetIns tit-chinhanh tit-border-b relative text-uppercase mb-3">Chi Nhánh Hồ Chí Minh</div>
+                <div class="pt-3 pb-3">
+                    Villa 6 - Hẻm 21- Đào Duy Anh<br />
+                    Phường 9 - Phú Nhuận - Hồ Chí Minh
+                </div>
+                <div class="font23 UTMHelvetIns tit-chinhanh text-uppercase">0909 28 5658</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class=" box box-tax mt-4">
+        <h2 class="tit-box cl_xanh6 text-center">
+            <a href="https://webcaycanh.com/tin-tuc/" class="cl_xanh6">BÀI VIẾT CÂY CẢNH</a>
+        </h2>
+        <div class="clearfix"></div>
+       
+        @Html.Action("BaiVietCCPartial","PartialView")
+
+        <div class="text-center"><a href="https://webcaycanh.com/tin-tuc/" class="btn-see btn " rel="nofollow">Xem thêm </a></div>
+    </div>
+
+    <div class="bottom_form text-center py-4">
+        <span class="h3 font23 UTMHelvetIns text-uppercase cl_52403c">Nhận thông tin về sản phẩm mới nhất</span>
+        <p style="color: #8b7b7c" class="text-center">Vui lòng nhập Email, chúng tôi sẽ gửi thông tin và báo giá ngay ! </p>
+        <form>
+            <div class="input-group col-12 col-sm-5" style="margin:0 auto">
+                <input type="text" class="input_send form-control" placeholder="Nhập Email">
+                <div class="input-group-append">
+                    <button class="btn_send btn btn-outline-secondary" type="button" id="button-addon2">Gửi <img src="https://webcaycanh.com/wp-content/themes/cay/imgs/send-message-button.png"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+

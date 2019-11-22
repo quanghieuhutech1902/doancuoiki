@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DoAn.Models.DMSP>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên Loại Cây
+        </th>
+        <th>
+            Tieu Đề Seo
+        </th>
+        <th>
+           Từ Khóa
+        </th>
+        <th>
+           Xóa Tạm
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TieuDeSeo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TuKhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XoaTam)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

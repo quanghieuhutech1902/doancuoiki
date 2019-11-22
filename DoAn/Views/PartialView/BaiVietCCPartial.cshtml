@@ -1,0 +1,50 @@
+﻿@using DoAn.Models;
+@model List<TINTUC>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm mb-3">
+            <a href="" title="Chăm sóc cây thủy sinh" class="img-hover transition">
+                <img src="~/Content/HinhAnhSP/tintuc/cach-cham-soc-cay-canh-trong-nha-350x245.jpg" class="w100 wp-post-image" alt="cham-soc-cay-thuy-sinh" />
+            </a>
+            <a href="" title="Chăm sóc cây thủy sinh" class=""><h3 class="font18 tit-border-b2 relative cl_xanh6 mb-3 mt-3 pb-2 " style="/*height: 25px; overflow: hidden;*/">@item.TenTinTuc</h3></a>
+            <div class="text-justify">
+               @item.MoTa
+            </div>
+        </div>
+    }
+</div>
+
+
+@*<div class="row">
+        <div class="col-sm mb-3">
+            <a href="https://webcaycanh.com/cham-soc-cay-thuy-sinh/" title="Chăm sóc cây thủy sinh" class="img-hover transition">
+                <img src="https://webcaycanh.com/wp-content/uploads/2019/06/cham-soc-cay-thuy-sinh-350x245.jpg" class="w100 wp-post-image" alt="cham-soc-cay-thuy-sinh" />
+            </a>
+            <a href="https://webcaycanh.com/cham-soc-cay-thuy-sinh/" title="Chăm sóc cây thủy sinh" class=""><h3 class="font18 tit-border-b2 relative cl_xanh6 mb-3 mt-3 pb-2 " style="/*height: 25px; overflow: hidden;*/">Chăm sóc cây thủy sinh</h3></a>
+            <div class="text-justify">
+                Cây thủy sinh có 2 loại một là loại sống dưới nước ở mặt đáy thường là một số loại rêu, tảo&#8230;Loại 2 là loại chỉ có phần rễ được tiếp xúc&#8230;
+            </div>
+        </div>
+        <div class="col-sm mb-3">
+            <a href="https://webcaycanh.com/meo-vat-khong-lo-tuoi-nuoc-cho-cay-vao-ngay-he/" title="[Mẹo vặt] Không lo tưới nước cho cây vào ngày hè" class="img-hover transition">
+                <img src="https://webcaycanh.com/wp-content/uploads/2019/04/meo-tuoi-nuoc-cho-cay-350x245.jpg" class="w100 wp-post-image" alt="meo-tuoi-nuoc-cho-cay" />
+            </a>
+            <a href="https://webcaycanh.com/meo-vat-khong-lo-tuoi-nuoc-cho-cay-vao-ngay-he/" title="[Mẹo vặt] Không lo tưới nước cho cây vào ngày hè" class=""><h3 class="font18 tit-border-b2 relative cl_xanh6 mb-3 mt-3 pb-2 " style="/*height: 25px; overflow: hidden;*/">[Mẹo vặt] Không lo tưới nước cho cây vào ngày hè</h3></a>
+            <div class="text-justify">
+                Việc tưới nước vẫn luôn là vấn đề nhức nhối với người chăm cây, tưới nhiều quá thì cây chết vì úng mà quên tưới thì cây héo mà chết. Nhất&#8230;
+            </div>
+        </div>
+        <div class="col-sm mb-3">
+            <a href="https://webcaycanh.com/nhung-cay-hoa-trong-trong-nha-tang-tham-my-cho-ngoi-nha/" title="Những cây hoa trồng trong nhà tăng thẩm mỹ cho ngôi nhà" class="img-hover transition">
+                <img src="https://webcaycanh.com/wp-content/uploads/2019/02/nhung-cay-hoa-trong-trong-nha-tang-tham-my-cho-ngoi-nha-350x245.jpg" class="w100 wp-post-image" alt="nhung-cay-hoa-trong-trong-nha-tang-tham-my-cho-ngoi-nha" />
+            </a>
+            <a href="https://webcaycanh.com/nhung-cay-hoa-trong-trong-nha-tang-tham-my-cho-ngoi-nha/" title="Những cây hoa trồng trong nhà tăng thẩm mỹ cho ngôi nhà" class=""><h3 class="font18 tit-border-b2 relative cl_xanh6 mb-3 mt-3 pb-2 " style="/*height: 25px; overflow: hidden;*/">Những cây hoa trồng trong nhà tăng thẩm mỹ cho ngôi nhà</h3></a>
+            <div class="text-justify">
+                Trong nhà của bạn không thể thiếu cây xanh phải không. Cây xanh mang đến không gian sống trong lành, thư thái và thoải mái. Cây xanh còn giúp&#8230;
+            </div>
+        </div>
+    </div>*@
+
