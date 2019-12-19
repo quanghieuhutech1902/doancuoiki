@@ -1,5 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="WebCayCanhModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="WebCayCanhEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHAMSOC" EntityType="WebCayCanhModel.CHAMSOC" />
+    <EntitySet Name="CHINHSACH" EntityType="WebCayCanhModel.CHINHSACH" />
+    <EntitySet Name="CTHD" EntityType="WebCayCanhModel.CTHD" />
+    <EntitySet Name="DMCHAMSOC" EntityType="WebCayCanhModel.DMCHAMSOC" />
+    <EntitySet Name="DMCHINHSACH" EntityType="WebCayCanhModel.DMCHINHSACH" />
+    <EntitySet Name="DMKM" EntityType="WebCayCanhModel.DMKM" />
+    <EntitySet Name="DMTT" EntityType="WebCayCanhModel.DMTT" />
+    <EntitySet Name="FOOTER" EntityType="WebCayCanhModel.FOOTER" />
+    <EntitySet Name="HINHANH" EntityType="WebCayCanhModel.HINHANH" />
+    <EntitySet Name="HOADON" EntityType="WebCayCanhModel.HOADON" />
+    <EntitySet Name="HUONGDAN" EntityType="WebCayCanhModel.HUONGDAN" />
+    <EntitySet Name="KHACHHANG" EntityType="WebCayCanhModel.KHACHHANG" />
+    <EntitySet Name="KHUYENMAI" EntityType="WebCayCanhModel.KHUYENMAI" />
+    <EntitySet Name="LIENHE" EntityType="WebCayCanhModel.LIENHE" />
+    <EntitySet Name="NGUOIDUNG" EntityType="WebCayCanhModel.NGUOIDUNG" />
+    <EntitySet Name="PHANHOI" EntityType="WebCayCanhModel.PHANHOI" />
+    <EntitySet Name="PTTT" EntityType="WebCayCanhModel.PTTT" />
+    <EntitySet Name="SANPHAM" EntityType="WebCayCanhModel.SANPHAM" />
+    <EntitySet Name="Slide" EntityType="WebCayCanhModel.Slide" />
+    <AssociationSet Name="FK_CHAMSOC_DMCHAMSOC" Association="WebCayCanhModel.FK_CHAMSOC_DMCHAMSOC">
+      <End Role="DMCHAMSOC" EntitySet="DMCHAMSOC" />
+      <End Role="CHAMSOC" EntitySet="CHAMSOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHINHSACH_DMCHINHSACH" Association="WebCayCanhModel.FK_CHINHSACH_DMCHINHSACH">
+      <End Role="DMCHINHSACH" EntitySet="DMCHINHSACH" />
+      <End Role="CHINHSACH" EntitySet="CHINHSACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHUYENMAI_DMKM" Association="WebCayCanhModel.FK_KHUYENMAI_DMKM">
+      <End Role="DMKM" EntitySet="DMKM" />
+      <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHD_HOADON" Association="WebCayCanhModel.FK_CTHD_HOADON">
+      <End Role="HOADON" EntitySet="HOADON" />
+      <End Role="CTHD" EntitySet="CTHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHD_SANPHAM" Association="WebCayCanhModel.FK_CTHD_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CTHD" EntitySet="CTHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADON_KHACHHANG" Association="WebCayCanhModel.FK_HOADON_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <EntitySet Name="TINTUC" EntityType="WebCayCanhModel.TINTUC" />
+    <AssociationSet Name="FK_TINTUC_DMTT" Association="WebCayCanhModel.FK_TINTUC_DMTT">
+      <End Role="DMTT" EntitySet="DMTT" />
+      <End Role="TINTUC" EntitySet="TINTUC" />
+    </AssociationSet>
+    <EntitySet Name="GIOITHIEU" EntityType="WebCayCanhModel.GIOITHIEU" />
+    <EntitySet Name="DMSP" EntityType="WebCayCanhModel.DMSP" />
+    <AssociationSet Name="FK_SANPHAM_DMSP" Association="WebCayCanhModel.FK_SANPHAM_DMSP">
+      <End Role="DMSP" EntitySet="DMSP" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="CHAMSOC">
     <Key>
       <PropertyRef Name="ID" />
@@ -10,7 +66,8 @@
     <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="CS_ID" Type="Int32" />
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="DMCHAMSOC" Relationship="Self.FK_CHAMSOC_DMCHAMSOC" FromRole="CHAMSOC" ToRole="DMCHAMSOC" />
+    <NavigationProperty Name="DMCHAMSOC" Relationship="WebCayCanhModel.FK_CHAMSOC_DMCHAMSOC" FromRole="CHAMSOC" ToRole="DMCHAMSOC" />
+    <Property Name="Alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="CHINHSACH">
     <Key>
@@ -22,16 +79,19 @@
     <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="CHNHSACH_ID" Type="Int32" />
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="DMCHINHSACH" Relationship="Self.FK_CHINHSACH_DMCHINHSACH" FromRole="CHINHSACH" ToRole="DMCHINHSACH" />
+    <NavigationProperty Name="DMCHINHSACH" Relationship="WebCayCanhModel.FK_CHINHSACH_DMCHINHSACH" FromRole="CHINHSACH" ToRole="DMCHINHSACH" />
+    <Property Name="Alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="CTHD">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SanPham" Type="Int32" />
-    <Property Name="KhachHang" Type="Int32" />
-    <NavigationProperty Name="HOADON" Relationship="Self.FK_HOADON_CTHD" FromRole="CTHD" ToRole="HOADON" />
+    <Property Name="SanPhamID" Type="Int32" />
+    <Property Name="SL" Type="Int32" />
+    <Property Name="HoaDonID" Type="Int32" />
+    <NavigationProperty Name="HOADON" Relationship="WebCayCanhModel.FK_CTHD_HOADON" FromRole="CTHD" ToRole="HOADON" />
+    <NavigationProperty Name="SANPHAM" Relationship="WebCayCanhModel.FK_CTHD_SANPHAM" FromRole="CTHD" ToRole="SANPHAM" />
   </EntityType>
   <EntityType Name="DMCHAMSOC">
     <Key>
@@ -41,7 +101,7 @@
     <Property Name="TenDM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Tukhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CHAMSOC" Relationship="Self.FK_CHAMSOC_DMCHAMSOC" FromRole="DMCHAMSOC" ToRole="CHAMSOC" />
+    <NavigationProperty Name="CHAMSOC" Relationship="WebCayCanhModel.FK_CHAMSOC_DMCHAMSOC" FromRole="DMCHAMSOC" ToRole="CHAMSOC" />
   </EntityType>
   <EntityType Name="DMCHINHSACH">
     <Key>
@@ -51,7 +111,7 @@
     <Property Name="TenDM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CHINHSACH" Relationship="Self.FK_CHINHSACH_DMCHINHSACH" FromRole="DMCHINHSACH" ToRole="CHINHSACH" />
+    <NavigationProperty Name="CHINHSACH" Relationship="WebCayCanhModel.FK_CHINHSACH_DMCHINHSACH" FromRole="DMCHINHSACH" ToRole="CHINHSACH" />
   </EntityType>
   <EntityType Name="DMKM">
     <Key>
@@ -61,19 +121,7 @@
     <Property Name="TenKM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="KHUYENMAI" Relationship="Self.FK_KHUYENMAI_DMKM" FromRole="DMKM" ToRole="KHUYENMAI" />
-  </EntityType>
-  <EntityType Name="DMSP">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenLoai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TieuDeSeo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="XoaTam" Type="Boolean" />
-    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_SANPHAM_DMSP" FromRole="DMSP" ToRole="SANPHAM" />
-    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KHUYENMAI" Relationship="WebCayCanhModel.FK_KHUYENMAI_DMKM" FromRole="DMKM" ToRole="KHUYENMAI" />
   </EntityType>
   <EntityType Name="DMTT">
     <Key>
@@ -85,7 +133,8 @@
     <Property Name="MoTa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="TINTUC" Relationship="Self.FK_TINTUC_DMTT" FromRole="DMTT" ToRole="TINTUC" />
+    <Property Name="Alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TINTUC" Relationship="WebCayCanhModel.FK_TINTUC_DMTT" FromRole="DMTT" ToRole="TINTUC" />
   </EntityType>
   <EntityType Name="FOOTER">
     <Key>
@@ -94,17 +143,6 @@
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="TinhTrang" Type="Boolean" />
-  </EntityType>
-  <EntityType Name="GIOITHIEU">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="HINHANH">
     <Key>
@@ -121,11 +159,13 @@
     <Property Name="ThoiGian" Type="DateTime" Precision="3" />
     <Property Name="TongTien" Type="Int32" />
     <Property Name="TinhTrang" Type="Boolean" />
-    <Property Name="NhanVien" Type="Int32" />
-    <Property Name="KhachHang" Type="Int32" />
-    <Property Name="CTHD_ID" Type="Int32" />
-    <Property Name="PTTT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CTHD" Relationship="Self.FK_HOADON_CTHD" FromRole="HOADON" ToRole="CTHD" />
+    <Property Name="NhanVienID" Type="Int32" />
+    <Property Name="KhachHangID" Type="Int32" />
+    <Property Name="PTTTID" Type="Int32" />
+    <Property Name="Mota" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongDonHang" Type="Int32" />
+    <NavigationProperty Name="CTHD" Relationship="WebCayCanhModel.FK_CTHD_HOADON" FromRole="HOADON" ToRole="CTHD" />
+    <NavigationProperty Name="KHACHHANG" Relationship="WebCayCanhModel.FK_HOADON_KHACHHANG" FromRole="HOADON" ToRole="KHACHHANG" />
   </EntityType>
   <EntityType Name="HUONGDAN">
     <Key>
@@ -146,6 +186,7 @@
     <Property Name="Gmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Diem" Type="Int32" />
     <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="HOADON" Relationship="WebCayCanhModel.FK_HOADON_KHACHHANG" FromRole="KHACHHANG" ToRole="HOADON" />
   </EntityType>
   <EntityType Name="KHUYENMAI">
     <Key>
@@ -158,7 +199,7 @@
     <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="MDKM_ID" Type="Int32" />
     <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="DMKM" Relationship="Self.FK_KHUYENMAI_DMKM" FromRole="KHUYENMAI" ToRole="DMKM" />
+    <NavigationProperty Name="DMKM" Relationship="WebCayCanhModel.FK_KHUYENMAI_DMKM" FromRole="KHUYENMAI" ToRole="DMKM" />
   </EntityType>
   <EntityType Name="LIENHE">
     <Key>
@@ -189,7 +230,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TenPTTT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SANPHAM">
@@ -206,9 +247,11 @@
     <Property Name="Gia" Type="Int32" />
     <Property Name="GiaKM" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="DMSP_ID" Type="Int32" />
-    <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="DMSP" Relationship="Self.FK_SANPHAM_DMSP" FromRole="SANPHAM" ToRole="DMSP" />
     <Property Name="Moi" Type="Int32" />
+    <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTHD" Relationship="WebCayCanhModel.FK_CTHD_SANPHAM" FromRole="SANPHAM" ToRole="CTHD" />
+    <Property Name="Alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DMSP" Relationship="WebCayCanhModel.FK_SANPHAM_DMSP" FromRole="SANPHAM" ToRole="DMSP" />
   </EntityType>
   <EntityType Name="Slide">
     <Key>
@@ -222,33 +265,9 @@
     <Property Name="TIeuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TinhTrang" Type="Boolean" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="TINTUC">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenTinTuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="MoTa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="DMTT_ID" Type="Int32" Nullable="false" />
-    <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="DMTT" Relationship="Self.FK_TINTUC_DMTT" FromRole="TINTUC" ToRole="DMTT" />
-  </EntityType>
   <Association Name="FK_CHAMSOC_DMCHAMSOC">
-    <End Role="DMCHAMSOC" Type="Self.DMCHAMSOC" Multiplicity="0..1" />
-    <End Role="CHAMSOC" Type="Self.CHAMSOC" Multiplicity="*" />
+    <End Type="WebCayCanhModel.DMCHAMSOC" Role="DMCHAMSOC" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.CHAMSOC" Role="CHAMSOC" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DMCHAMSOC">
         <PropertyRef Name="ID" />
@@ -259,8 +278,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CHINHSACH_DMCHINHSACH">
-    <End Role="DMCHINHSACH" Type="Self.DMCHINHSACH" Multiplicity="0..1" />
-    <End Role="CHINHSACH" Type="Self.CHINHSACH" Multiplicity="*" />
+    <End Type="WebCayCanhModel.DMCHINHSACH" Role="DMCHINHSACH" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.CHINHSACH" Role="CHINHSACH" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DMCHINHSACH">
         <PropertyRef Name="ID" />
@@ -270,21 +289,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_HOADON_CTHD">
-    <End Role="CTHD" Type="Self.CTHD" Multiplicity="0..1" />
-    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CTHD">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="HOADON">
-        <PropertyRef Name="CTHD_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_KHUYENMAI_DMKM">
-    <End Role="DMKM" Type="Self.DMKM" Multiplicity="0..1" />
-    <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+    <End Type="WebCayCanhModel.DMKM" Role="DMKM" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DMKM">
         <PropertyRef Name="ID" />
@@ -294,21 +301,60 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SANPHAM_DMSP">
-    <End Role="DMSP" Type="Self.DMSP" Multiplicity="0..1" />
-    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+  <Association Name="FK_CTHD_HOADON">
+    <End Type="WebCayCanhModel.HOADON" Role="HOADON" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.CTHD" Role="CTHD" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="DMSP">
+      <Principal Role="HOADON">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="SANPHAM">
-        <PropertyRef Name="DMSP_ID" />
+      <Dependent Role="CTHD">
+        <PropertyRef Name="HoaDonID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_CTHD_SANPHAM">
+    <End Type="WebCayCanhModel.SANPHAM" Role="SANPHAM" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.CTHD" Role="CTHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CTHD">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADON_KHACHHANG">
+    <End Type="WebCayCanhModel.KHACHHANG" Role="KHACHHANG" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.HOADON" Role="HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="KhachHangID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TINTUC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTinTuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DMTT_ID" Type="Int32" Nullable="false" />
+    <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DMTT" Relationship="WebCayCanhModel.FK_TINTUC_DMTT" FromRole="TINTUC" ToRole="DMTT" />
+  </EntityType>
   <Association Name="FK_TINTUC_DMTT">
-    <End Role="DMTT" Type="Self.DMTT" Multiplicity="1" />
-    <End Role="TINTUC" Type="Self.TINTUC" Multiplicity="*" />
+    <End Type="WebCayCanhModel.DMTT" Role="DMTT" Multiplicity="1" />
+    <End Type="WebCayCanhModel.TINTUC" Role="TINTUC" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DMTT">
         <PropertyRef Name="ID" />
@@ -318,53 +364,41 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="WebCayCanhEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CHAMSOC" EntityType="Self.CHAMSOC" />
-    <EntitySet Name="CHINHSACH" EntityType="Self.CHINHSACH" />
-    <EntitySet Name="CTHD" EntityType="Self.CTHD" />
-    <EntitySet Name="DMCHAMSOC" EntityType="Self.DMCHAMSOC" />
-    <EntitySet Name="DMCHINHSACH" EntityType="Self.DMCHINHSACH" />
-    <EntitySet Name="DMKM" EntityType="Self.DMKM" />
-    <EntitySet Name="DMSP" EntityType="Self.DMSP" />
-    <EntitySet Name="DMTT" EntityType="Self.DMTT" />
-    <EntitySet Name="FOOTER" EntityType="Self.FOOTER" />
-    <EntitySet Name="GIOITHIEU" EntityType="Self.GIOITHIEU" />
-    <EntitySet Name="HINHANH" EntityType="Self.HINHANH" />
-    <EntitySet Name="HOADON" EntityType="Self.HOADON" />
-    <EntitySet Name="HUONGDAN" EntityType="Self.HUONGDAN" />
-    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" />
-    <EntitySet Name="KHUYENMAI" EntityType="Self.KHUYENMAI" />
-    <EntitySet Name="LIENHE" EntityType="Self.LIENHE" />
-    <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" />
-    <EntitySet Name="PHANHOI" EntityType="Self.PHANHOI" />
-    <EntitySet Name="PTTT" EntityType="Self.PTTT" />
-    <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" />
-    <EntitySet Name="Slide" EntityType="Self.Slide" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="TINTUC" EntityType="Self.TINTUC" />
-    <AssociationSet Name="FK_CHAMSOC_DMCHAMSOC" Association="Self.FK_CHAMSOC_DMCHAMSOC">
-      <End Role="DMCHAMSOC" EntitySet="DMCHAMSOC" />
-      <End Role="CHAMSOC" EntitySet="CHAMSOC" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CHINHSACH_DMCHINHSACH" Association="Self.FK_CHINHSACH_DMCHINHSACH">
-      <End Role="DMCHINHSACH" EntitySet="DMCHINHSACH" />
-      <End Role="CHINHSACH" EntitySet="CHINHSACH" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HOADON_CTHD" Association="Self.FK_HOADON_CTHD">
-      <End Role="CTHD" EntitySet="CTHD" />
-      <End Role="HOADON" EntitySet="HOADON" />
-    </AssociationSet>
-    <AssociationSet Name="FK_KHUYENMAI_DMKM" Association="Self.FK_KHUYENMAI_DMKM">
-      <End Role="DMKM" EntitySet="DMKM" />
-      <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SANPHAM_DMSP" Association="Self.FK_SANPHAM_DMSP">
-      <End Role="DMSP" EntitySet="DMSP" />
-      <End Role="SANPHAM" EntitySet="SANPHAM" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TINTUC_DMTT" Association="Self.FK_TINTUC_DMTT">
-      <End Role="DMTT" EntitySet="DMTT" />
-      <End Role="TINTUC" EntitySet="TINTUC" />
-    </AssociationSet>
-  </EntityContainer>
+  <EntityType Name="GIOITHIEU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TieuDeSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DMSP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TieuDeSeo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TuKhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="XoaTam" Type="Boolean" />
+    <Property Name="Alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SANPHAM" Relationship="WebCayCanhModel.FK_SANPHAM_DMSP" FromRole="DMSP" ToRole="SANPHAM" />
+  </EntityType>
+  <Association Name="FK_SANPHAM_DMSP">
+    <End Type="WebCayCanhModel.DMSP" Role="DMSP" Multiplicity="0..1" />
+    <End Type="WebCayCanhModel.SANPHAM" Role="SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DMSP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="DMSP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -1,0 +1,77 @@
+﻿@model DoAn.Models.CHINHSACH
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>XÓA CHÍNH SÁCH</h2>
+
+<h3>BẠN CÓ MUỐN XÓA?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenChinhSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenChinhSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TuKhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TuKhoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TieuDeSeo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDeSeo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DMCHINHSACH.TenDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DMCHINHSACH.TenDM)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-success" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>
+
+
+
+

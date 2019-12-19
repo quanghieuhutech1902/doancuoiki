@@ -10,6 +10,7 @@
     <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
     <Property Name="CS_ID" Type="int" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alias" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="CHINHSACH">
     <Key>
@@ -21,14 +22,16 @@
     <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
     <Property Name="CHNHSACH_ID" Type="int" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alias" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="CTHD">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="SanPham" Type="int" />
-    <Property Name="KhachHang" Type="int" />
+    <Property Name="SanPhamID" Type="int" />
+    <Property Name="SL" Type="int" />
+    <Property Name="HoaDonID" Type="int" />
   </EntityType>
   <EntityType Name="DMCHAMSOC">
     <Key>
@@ -63,10 +66,11 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenLoai" Type="nvarchar" MaxLength="100" />
-    <Property Name="HinhAnh" Type="text" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="50" />
     <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
     <Property Name="XoaTam" Type="bit" />
+    <Property Name="Alias" Type="varchar" MaxLength="100" />
+    <Property Name="HinhAnh" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="DMTT">
     <Key>
@@ -78,6 +82,7 @@
     <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
     <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alias" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="FOOTER">
     <Key>
@@ -96,7 +101,8 @@
     <Property Name="NoiDung" Type="nvarchar(max)" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
     <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
-    <Property Name="HinhAnh" Type="image" />
+    <Property Name="Alias" Type="varchar" MaxLength="100" />
+    <Property Name="HinhAnh" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="HINHANH">
     <Key>
@@ -113,10 +119,11 @@
     <Property Name="ThoiGian" Type="datetime" />
     <Property Name="TongTien" Type="int" />
     <Property Name="TinhTrang" Type="bit" />
-    <Property Name="NhanVien" Type="int" />
-    <Property Name="KhachHang" Type="int" />
-    <Property Name="CTHD_ID" Type="int" />
-    <Property Name="PTTT" Type="nvarchar" MaxLength="100" />
+    <Property Name="NhanVienID" Type="int" />
+    <Property Name="KhachHangID" Type="int" />
+    <Property Name="PTTTID" Type="int" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="200" />
+    <Property Name="SoLuongDonHang" Type="int" />
   </EntityType>
   <EntityType Name="HUONGDAN">
     <Key>
@@ -198,6 +205,7 @@
     <Property Name="DMSP_ID" Type="int" />
     <Property Name="Moi" Type="int" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alias" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="Slide">
     <Key>
@@ -211,16 +219,6 @@
     <Property Name="TIeuDeSeo" Type="nvarchar" MaxLength="100" />
     <Property Name="TinhTrang" Type="bit" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TINTUC">
     <Key>
       <PropertyRef Name="ID" />
@@ -230,9 +228,10 @@
     <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
     <Property Name="NoiDung" Type="nvarchar(max)" />
     <Property Name="TuKhoa" Type="nvarchar" MaxLength="100" />
-    <Property Name="HinhAnh" Type="image" />
     <Property Name="DMTT_ID" Type="int" Nullable="false" />
     <Property Name="TieuDeSeo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alias" Type="varchar" MaxLength="100" />
+    <Property Name="HinhAnh" Type="varchar" MaxLength="250" />
   </EntityType>
   <Association Name="FK_CHAMSOC_DMCHAMSOC">
     <End Role="DMCHAMSOC" Type="Self.DMCHAMSOC" Multiplicity="0..1" />
@@ -258,15 +257,39 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_HOADON_CTHD">
-    <End Role="CTHD" Type="Self.CTHD" Multiplicity="0..1" />
+  <Association Name="FK_CTHD_HOADON">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="0..1" />
+    <End Role="CTHD" Type="Self.CTHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CTHD">
+        <PropertyRef Name="HoaDonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHD_SANPHAM">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="CTHD" Type="Self.CTHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CTHD">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADON_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
     <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="CTHD">
+      <Principal Role="KHACHHANG">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="HOADON">
-        <PropertyRef Name="CTHD_ID" />
+        <PropertyRef Name="KhachHangID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -328,7 +351,6 @@
     <EntitySet Name="PTTT" EntityType="Self.PTTT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TINTUC" EntityType="Self.TINTUC" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_CHAMSOC_DMCHAMSOC" Association="Self.FK_CHAMSOC_DMCHAMSOC">
       <End Role="DMCHAMSOC" EntitySet="DMCHAMSOC" />
@@ -338,8 +360,16 @@
       <End Role="DMCHINHSACH" EntitySet="DMCHINHSACH" />
       <End Role="CHINHSACH" EntitySet="CHINHSACH" />
     </AssociationSet>
-    <AssociationSet Name="FK_HOADON_CTHD" Association="Self.FK_HOADON_CTHD">
+    <AssociationSet Name="FK_CTHD_HOADON" Association="Self.FK_CTHD_HOADON">
+      <End Role="HOADON" EntitySet="HOADON" />
       <End Role="CTHD" EntitySet="CTHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHD_SANPHAM" Association="Self.FK_CTHD_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CTHD" EntitySet="CTHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADON_KHACHHANG" Association="Self.FK_HOADON_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
       <End Role="HOADON" EntitySet="HOADON" />
     </AssociationSet>
     <AssociationSet Name="FK_KHUYENMAI_DMKM" Association="Self.FK_KHUYENMAI_DMKM">

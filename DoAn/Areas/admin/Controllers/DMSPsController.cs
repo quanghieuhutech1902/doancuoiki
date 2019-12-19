@@ -7,89 +7,114 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DoAn.Models;
+using System.IO;
+using ImageResizer;
+using DoAn.App_Start;
 
 namespace DoAn.Areas.admin.Controllers
 {
     public class DMSPsController : Controller
     {
         private WebCayCanhEntities db = new WebCayCanhEntities();
+        public string urlImage = "/files/image/" + DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day + "/";
+        public string UploadImage(HttpPostedFileBase hinhanh)
+        {
+            string pic = Path.GetFileName(hinhanh.FileName);
+            string pfull = System.IO.Path.Combine(Server.MapPath(urlImage));
+            if (!Directory.Exists(pfull))
+                Directory.CreateDirectory(pfull);
+            string path = System.IO.Path.Combine(Server.MapPath(urlImage), pic);
 
-        // GET: admin/DMSPs
+            hinhanh.SaveAs(path);
+            ResizeSettings resizeSetting = new ResizeSettings
+            {
+                Width = 320,
+                Height = 320,
+                Format = "png"
+            };
+            ImageBuilder.Current.Build(path, path, resizeSetting);
+            return urlImage + pic;
+        }
+
         public ActionResult Index()
         {
             return View(db.DMSP.ToList());
         }
 
-        // GET: admin/DMSPs/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DMSP dMSP = db.DMSP.Find(id);
-            if (dMSP == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dMSP);
-        }
+       
 
-        // GET: admin/DMSPs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: admin/DMSPs/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,TenLoai,TieuDeSeo,TuKhoa,XoaTam")] DMSP dMSP)
+        public ActionResult Create(DMSP dMSP, HttpPostedFileBase hinhanh)
         {
-            if (ModelState.IsValid)
+            try
             {
+                if (hinhanh != null)
+                {
+                    dMSP.HinhAnh = UploadImage(hinhanh);
+                }
+                else
+                {
+                    dMSP.HinhAnh = "https://png.pngtree.com/png-clipart/20190611/original/pngtree-404-hand-painted-pattern-png-image_2805465.jpg";
+                }
+                dMSP.Alias = ConfigWeb.convertToUnSign3(dMSP.TenLoai);
                 db.DMSP.Add(dMSP);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(dMSP);
+            catch
+            {
+                return View(dMSP);
+            }
+            
         }
 
-        // GET: admin/DMSPs/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DMSP dMSP = db.DMSP.Find(id);
-            if (dMSP == null)
+            DMSP dMSp = db.DMSP.Find(id);
+            if (dMSp == null)
             {
                 return HttpNotFound();
             }
-            return View(dMSP);
+            
+            return View(dMSp);
         }
 
-        // POST: admin/DMSPs/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,TenLoai,TieuDeSeo,TuKhoa,XoaTam")] DMSP dMSP)
+        public ActionResult Edit(DMSP dMSP, HttpPostedFileBase hinhanh)
         {
-            if (ModelState.IsValid)
+            try
             {
+                if (hinhanh != null)
+                {
+                    dMSP.HinhAnh = UploadImage(hinhanh);
+                }
+
+                dMSP.Alias = ConfigWeb.convertToUnSign3(dMSP.TenLoai);
                 db.Entry(dMSP).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(dMSP);
+            catch
+            {
+                
+                return View(dMSP);
+            }
+
         }
 
-        // GET: admin/DMSPs/Delete/5
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +129,6 @@ namespace DoAn.Areas.admin.Controllers
             return View(dMSP);
         }
 
-        // POST: admin/DMSPs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DoAn.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "SẢN PHẨM CỬA HÀNG";
+    Layout = "~/Views/Layout/NguoiDungLayout.cshtml";
+}
+
+
+
+
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-4 text-uppercase font13 cl_nau" id="breadcrumbs"><span><span><a href="">Trang chủ</a> <i class="fa fa-angle-right"></i> <span class="breadcrumb_last"></span></span></span></div>
+            <div class="clearfix"></div>
+
+            <div class="col-sm-12 a_cl_xanh" id="left-panel">
+                <div class="w100"><h1 class="tit-h1 tit-border-b3 pull-left mb-1 padb20 font30 UTMHelvetIns cl_nau">@ViewBag.tenDanhMuc</h1></div>
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-12 col-md-3 item-loop-tour">
+                            <div class="wrap-item-loop-sp bg_white ">
+                                <div class="item-loop-sp mb-4">
+                                    <div class="img1 photo overhiden marb10 relative">
+                                        <a href="/san-pham/@item.Alias-@item.ID" title="@item.TenSP">
+                                            <img src="@item.HinhAnh" class="w100 transition wp-post-image" alt="cay-bach-ma-hoang-tu" srcset="@item.HinhAnh" sizes="(max-width: 255px) 100vw, 255px">
+                                        </a>
+                                        <div class="btn-cart-loop-cay d-none transition w100 text-center">
+                                            <button onclick="addCart(9680)" class="btn btn-success">
+                                                <i class="fa fa-shopping-cart cl_white"></i><span>CHO VÀO GIỎ</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="transition w100 wr1 text-center ">
+                                        <a href="/san-pham/@item.Alias-@item.ID" title="@item.TenSP"><h3 class="clear tit-loop-sp">@item.TenSP</h3></a>
+                                        <span class="price font18 text-danger">@string.Format("{0:#,0}", item.Gia)<ins>₫</ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

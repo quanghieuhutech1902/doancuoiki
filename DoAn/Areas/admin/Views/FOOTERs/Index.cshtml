@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DoAn.Models.FOOTER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>FOOTER</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/footers/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Nội Dung
+                </th>
+                <th>
+                    Tình Trạng
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoiDung)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TinhTrang)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/footers/edit/@item.ID"><i class="fa fa-edit"></i></a> |
+
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/footers/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

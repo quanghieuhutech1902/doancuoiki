@@ -8,109 +8,114 @@ using System.Web;
 using System.Web.Mvc;
 using DoAn.Models;
 
-namespace DoAn.Areas.admin
+namespace DoAn.Areas.admin.Controllers
 {
-    public class DMCHAMSOCsController : Controller
+    public class HOADONsController : Controller
     {
         private WebCayCanhEntities db = new WebCayCanhEntities();
 
-        // GET: admin/DMCHAMSOCs
+        // GET: admin/HOADONs
         public ActionResult Index()
         {
-            return View(db.DMCHAMSOC.ToList());
+            var hOADON = db.HOADON.Include(h => h.KHACHHANG);
+            return View(hOADON.ToList());
         }
 
-        // GET: admin/DMCHAMSOCs/Details/5
+        // GET: admin/HOADONs/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DMCHAMSOC dMCHAMSOC = db.DMCHAMSOC.Find(id);
-            if (dMCHAMSOC == null)
+            HOADON hOADON = db.HOADON.Find(id);
+            if (hOADON == null)
             {
                 return HttpNotFound();
             }
-            return View(dMCHAMSOC);
+            return View(hOADON);
         }
 
-        // GET: admin/DMCHAMSOCs/Create
+        // GET: admin/HOADONs/Create
         public ActionResult Create()
         {
+            ViewBag.KhachHangID = new SelectList(db.KHACHHANG, "ID", "TenKH");
             return View();
         }
 
-        // POST: admin/DMCHAMSOCs/Create
+        // POST: admin/HOADONs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,TenDM,Tukhoa,TieuDeSeo")] DMCHAMSOC dMCHAMSOC)
+        public ActionResult Create([Bind(Include = "ID,ThoiGian,TongTien,TinhTrang,NhanVienID,KhachHangID,PTTTID,Mota,SoLuongDonHang")] HOADON hOADON)
         {
             if (ModelState.IsValid)
             {
-                db.DMCHAMSOC.Add(dMCHAMSOC);
+                db.HOADON.Add(hOADON);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(dMCHAMSOC);
+            ViewBag.KhachHangID = new SelectList(db.KHACHHANG, "ID", "TenKH", hOADON.KhachHangID);
+            return View(hOADON);
         }
 
-        // GET: admin/DMCHAMSOCs/Edit/5
+        // GET: admin/HOADONs/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DMCHAMSOC dMCHAMSOC = db.DMCHAMSOC.Find(id);
-            if (dMCHAMSOC == null)
+            HOADON hOADON = db.HOADON.Find(id);
+            if (hOADON == null)
             {
                 return HttpNotFound();
             }
-            return View(dMCHAMSOC);
+            ViewBag.KhachHangID = new SelectList(db.KHACHHANG, "ID", "TenKH", hOADON.KhachHangID);
+            return View(hOADON);
         }
 
-        // POST: admin/DMCHAMSOCs/Edit/5
+        // POST: admin/HOADONs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,TenDM,Tukhoa,TieuDeSeo")] DMCHAMSOC dMCHAMSOC)
+        public ActionResult Edit([Bind(Include = "ID,ThoiGian,TongTien,TinhTrang,NhanVienID,KhachHangID,PTTTID,Mota,SoLuongDonHang")] HOADON hOADON)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(dMCHAMSOC).State = EntityState.Modified;
+                db.Entry(hOADON).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(dMCHAMSOC);
+            ViewBag.KhachHangID = new SelectList(db.KHACHHANG, "ID", "TenKH", hOADON.KhachHangID);
+            return View(hOADON);
         }
 
-        // GET: admin/DMCHAMSOCs/Delete/5
+        // GET: admin/HOADONs/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DMCHAMSOC dMCHAMSOC = db.DMCHAMSOC.Find(id);
-            if (dMCHAMSOC == null)
+            HOADON hOADON = db.HOADON.Find(id);
+            if (hOADON == null)
             {
                 return HttpNotFound();
             }
-            return View(dMCHAMSOC);
+            return View(hOADON);
         }
 
-        // POST: admin/DMCHAMSOCs/Delete/5
+        // POST: admin/HOADONs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            DMCHAMSOC dMCHAMSOC = db.DMCHAMSOC.Find(id);
-            db.DMCHAMSOC.Remove(dMCHAMSOC);
+            HOADON hOADON = db.HOADON.Find(id);
+            db.HOADON.Remove(hOADON);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

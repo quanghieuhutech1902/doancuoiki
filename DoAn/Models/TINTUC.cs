@@ -19,9 +19,10 @@ namespace DoAn.Models
         public string MoTa { get; set; }
         public string NoiDung { get; set; }
         public string TuKhoa { get; set; }
-        public byte[] HinhAnh { get; set; }
         public int DMTT_ID { get; set; }
         public string TieuDeSeo { get; set; }
+        public string Alias { get; set; }
+        public string HinhAnh { get; set; }
     
         public virtual DMTT DMTT { get; set; }
     }

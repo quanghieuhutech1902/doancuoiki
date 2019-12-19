@@ -1,0 +1,94 @@
+﻿@model DoAn.Models.TINTUC
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xóa Tin Tức</h2>
+
+<h3>Bạn Có Muốn Xóa?</h3>
+<div>
+   
+    <hr />
+    <div class="row" style="margin-left:10px">
+        <div class="col-sm-12">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.TenTinTuc)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TenTinTuc)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MoTa)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MoTa)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.NoiDung)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NoiDung)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TuKhoa)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TuKhoa)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.HinhAnh)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.HinhAnh)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TieuDeSeo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TieuDeSeo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Alias)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Alias)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DMTT.TenDMTT)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DMTT.TenDMTT)
+                </dd>
+
+            </dl>
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Xóa" class="btn btn-default" /> |
+                @Html.ActionLink("Trở Về", "Index")
+            </div>
+        }
+    </div>

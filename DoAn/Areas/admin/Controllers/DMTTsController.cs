@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DoAn.Models;
+using DoAn.App_Start;
 
 namespace DoAn.Areas.admin.Controllers
 {
@@ -14,51 +15,35 @@ namespace DoAn.Areas.admin.Controllers
     {
         private WebCayCanhEntities db = new WebCayCanhEntities();
 
-        // GET: admin/DMTTs
+        //lấy toàn bộ danh sách
         public ActionResult Index()
         {
             return View(db.DMTT.ToList());
         }
 
-        // GET: admin/DMTTs/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DMTT dMTT = db.DMTT.Find(id);
-            if (dMTT == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dMTT);
-        }
-
-        // GET: admin/DMTTs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: admin/DMTTs/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,TenDMTT,NgayCN,MoTa,TuKhoa,TieuDeSeo")] DMTT dMTT)
+        public ActionResult Create(DMTT dMTT)
         {
-            if (ModelState.IsValid)
+            try
             {
+                dMTT.NgayCN = DateTime.Now;
+                dMTT.Alias = ConfigWeb.convertToUnSign3(dMTT.TenDMTT).ToLower();
                 db.DMTT.Add(dMTT);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(dMTT);
+            catch
+            {
+                return View(dMTT);
+            }
         }
 
-        // GET: admin/DMTTs/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,39 +58,26 @@ namespace DoAn.Areas.admin.Controllers
             return View(dMTT);
         }
 
-        // POST: admin/DMTTs/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,TenDMTT,NgayCN,MoTa,TuKhoa,TieuDeSeo")] DMTT dMTT)
+        public ActionResult Edit(DMTT dMTT)
         {
-            if (ModelState.IsValid)
+            try
             {
+                dMTT.NgayCN = DateTime.Now;
+                dMTT.Alias = ConfigWeb.convertToUnSign3(dMTT.TenDMTT).ToLower();
                 db.Entry(dMTT).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(dMTT);
+            catch
+            {
+                return View(dMTT);
+            }
+            
         }
 
-        // GET: admin/DMTTs/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DMTT dMTT = db.DMTT.Find(id);
-            if (dMTT == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dMTT);
-        }
-
-        // POST: admin/DMTTs/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -114,6 +86,7 @@ namespace DoAn.Areas.admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
 
         protected override void Dispose(bool disposing)
         {

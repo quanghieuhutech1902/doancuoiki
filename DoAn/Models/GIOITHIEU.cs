@@ -19,6 +19,7 @@ namespace DoAn.Models
         public string NoiDung { get; set; }
         public string TieuDeSeo { get; set; }
         public string TuKhoa { get; set; }
-        public byte[] HinhAnh { get; set; }
+        public string Alias { get; set; }
+        public string HinhAnh { get; set; }
     }
 }

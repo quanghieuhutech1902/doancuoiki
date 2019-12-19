@@ -1,0 +1,71 @@
+﻿@model IEnumerable<DoAn.Models.CHAMSOC>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>Chăm Sóc</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/chamsocs/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Tên Cách Chăm Sóc
+                </th>
+                <th>
+                    Mô Tả
+                </th>
+                <th>
+                    Từ Khóa
+                </th>
+                <th>
+                    Tiêu Đề Seo
+                </th>
+                <th>
+                    Alias
+                </th>
+                <th>
+                    Tên Danh Mục
+                </th>
+                <th></th>
+            </tr>
+
+           @foreach (var item in Model)
+           {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenCachChamSoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TuKhoa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TieuDeSeo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DMCHAMSOC.TenDM)
+                </td>
+                <td>
+                <td>
+                    <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/chamsocs/edit/@item.ID"><i class="fa fa-edit"></i></a> |
+
+                    <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/chamsocs/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                </td>
+                
+            </tr>
+           }
+
+        </table>
+    </div>
+</div>
+
+
+
+

@@ -3,15 +3,15 @@
 
 
 <div class="row">
-@foreach (var item in Model)
-{
-    <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-      
-            <a class="item-hover-1 relative transition" href="" title="Cây Cảnh Để Bàn">
+    @foreach (var item in Model)
+    {
+        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
+
+            <a class="item-hover-1 relative transition" href="/danh-muc-san-pham/@item.Alias-@item.ID" title="@item.TenLoai">
                 <div class="hover">
                     <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">@item.TenLoai</h2>
-                    <img class="w100" src="@item.HinhAnh" alt="Cây Cảnh Để Bàn"   />
-                    
+                    <img class="w100" src="@item.HinhAnh" alt="" />
+
                     <div class="overlay ">
                         <div class="w100">
                             <span class="text-uppercase transition">Chi tiết</span>
@@ -19,116 +19,9 @@
                     </div>
                 </div>
             </a>
-        
-    </div>
-}
+        </div>
+    }
 </div>
 
 
 
-@*<div class="row">
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/cay-canh-de-ban/" title="Cây Cảnh Để Bàn">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Cây Cảnh Để Bàn</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/cay-canh-de-ban-255x255.jpg" alt="Cây Cảnh Để Bàn">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/cay-canh-sen-da/" title="Cây Cảnh Sen Đá">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Cây Cảnh Sen Đá</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/cay-sen-da-255x255.jpg" alt="Cây Cảnh Sen Đá">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/cay-canh-phong-thuy/" title="Cây Cảnh Phong Thủy">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Cây Cảnh Phong Thủy</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/cay-canh-phong-thuy-255x255.jpg" alt="Cây Cảnh Phong Thủy">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/cay-canh-trong-nha/" title="Cây Cảnh Trong Nhà">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Cây Cảnh Trong Nhà</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/cay-canh-trong-nha-255x255.jpg" alt="Cây Cảnh Trong Nhà">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/cay-canh-van-phong/" title="Cây Cảnh Văn Phòng">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Cây Cảnh Văn Phòng</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/cay-canh-van-phong-255x255.jpg" alt="Cây Cảnh Văn Phòng">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/cay-thuy-sinh/" title="Cây Thủy Sinh">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Cây Thủy Sinh</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/cay-thuy-sinh-255x255.jpg" alt="Cây Thủy Sinh">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/xuong-rong-canh/" title="Xương Rồng Cảnh">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Xương Rồng Cảnh</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/xuong-rong-255x255.jpg" alt="Xương Rồng Cảnh">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 text-center transition marb30">
-            <a class="item-hover-1 relative transition" href="https://webcaycanh.com/terrarium/" title="Terrarium">
-                <div class="hover">
-                    <h2 class="h2-tax text-center text-uppercase cl_white font18 w100">Terrarium</h2>
-                    <img class="w100" src="https://webcaycanh.com/wp-content/uploads/2018/08/terrarium-255x255.jpg" alt="Terrarium">
-                    <div class="overlay ">
-                        <div class="w100">
-                            <span class="text-uppercase transition">Chi tiết</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>*@

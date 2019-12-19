@@ -31,10 +31,8 @@ namespace DoAn.Models
         public virtual DbSet<DMCHAMSOC> DMCHAMSOC { get; set; }
         public virtual DbSet<DMCHINHSACH> DMCHINHSACH { get; set; }
         public virtual DbSet<DMKM> DMKM { get; set; }
-        public virtual DbSet<DMSP> DMSP { get; set; }
         public virtual DbSet<DMTT> DMTT { get; set; }
         public virtual DbSet<FOOTER> FOOTER { get; set; }
-        public virtual DbSet<GIOITHIEU> GIOITHIEU { get; set; }
         public virtual DbSet<HINHANH> HINHANH { get; set; }
         public virtual DbSet<HOADON> HOADON { get; set; }
         public virtual DbSet<HUONGDAN> HUONGDAN { get; set; }
@@ -46,7 +44,8 @@ namespace DoAn.Models
         public virtual DbSet<PTTT> PTTT { get; set; }
         public virtual DbSet<SANPHAM> SANPHAM { get; set; }
         public virtual DbSet<Slide> Slide { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TINTUC> TINTUC { get; set; }
+        public virtual DbSet<GIOITHIEU> GIOITHIEU { get; set; }
+        public virtual DbSet<DMSP> DMSP { get; set; }
     }
 }

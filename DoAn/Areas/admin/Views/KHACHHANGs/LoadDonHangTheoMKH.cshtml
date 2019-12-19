@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DoAn.Models.HOADON>
+
+<div class="row" style="margin-left:10px">
+    
+    <div class="col-sm-12"> 
+        <hr color="red" size="40px" />
+        <h2>Khách Hàng</h2>
+
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                   Thời Gian
+                </th>
+                <th>
+                    Tổng Tiền
+                </th>
+                <th>
+                    Tình Trạng
+                </th>
+                <th>
+                    Mã Nhân Viên
+                </th>
+                <th>
+                    Phương Thức Thanh Toán
+                </th>
+                <th>
+                    Mô Tả
+                </th>
+                <th>
+                   Số Lượng Đơn Hàng
+                </th>
+                <th>
+                    Khách Hàng
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ThoiGian)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TongTien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TinhTrang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NhanVienID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PTTTID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mota)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLuongDonHang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KHACHHANG.TenKH)
+                    </td>
+                    
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

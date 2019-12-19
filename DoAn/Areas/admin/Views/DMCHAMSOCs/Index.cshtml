@@ -5,42 +5,44 @@
     Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenDM)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tukhoa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TieuDeSeo)
-        </th>
-        <th></th>
-    </tr>
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>DANH SÁCH DANH MỤC CHĂM SÓC</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/dmchamsocs/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Tên Danh Mục
+                </th>
+                <th>
+                    Từ Khóa
+                </th>
+                <th>
+                    Tiêu Đề Seo
+                </th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenDM)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tukhoa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TieuDeSeo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenDM)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tukhoa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TieuDeSeo)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/dmchamsocs/edit/@item.ID"><i class="fa fa-edit"></i></a> |
 
-</table>
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/dmchamsocs/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

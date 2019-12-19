@@ -1,0 +1,67 @@
+﻿@model DoAn.Models.CHAMSOC
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/NguoiDungLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CHAMSOC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenCachChamSoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenCachChamSoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TuKhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TuKhoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TieuDeSeo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDeSeo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DMCHAMSOC.TenDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DMCHAMSOC.TenDM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

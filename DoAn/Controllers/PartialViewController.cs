@@ -41,17 +41,5 @@ namespace DoAn.Controllers
         {
             return PartialView(db.TINTUC.Take(3).ToList());
         }
-
-        //xemchitiet
-        public ViewResult XemChiTiet(int id)
-        {
-            SANPHAM sanpham = db.SANPHAM.SingleOrDefault(n => n.ID == id);
-            if (sanpham == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            return View(sanpham);
-        }
     }
 }

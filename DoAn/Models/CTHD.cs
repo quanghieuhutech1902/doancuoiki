@@ -14,17 +14,12 @@ namespace DoAn.Models
     
     public partial class CTHD
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CTHD()
-        {
-            this.HOADON = new HashSet<HOADON>();
-        }
-    
         public int ID { get; set; }
-        public Nullable<int> SanPham { get; set; }
-        public Nullable<int> KhachHang { get; set; }
+        public Nullable<int> SanPhamID { get; set; }
+        public Nullable<int> SL { get; set; }
+        public Nullable<int> HoaDonID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON> HOADON { get; set; }
+        public virtual HOADON HOADON { get; set; }
+        public virtual SANPHAM SANPHAM { get; set; }
     }
 }

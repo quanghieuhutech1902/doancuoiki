@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DoAn.Models.CTHD>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>DANH SÁCH CHI TIẾT HÓA ĐƠN</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/cthds/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                   Số Lượng
+                </th>
+                <th>
+                    Mô Tả
+                </th>
+                <th>
+                   Tên Sản Phẩm
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SL)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HOADON.Mota)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SANPHAM.TenSP)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/cthds/edit/@item.ID"><i class="fa fa-edit"></i></a> |
+
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/cthds/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

@@ -14,6 +14,12 @@ namespace DoAn.Models
     
     public partial class SANPHAM
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SANPHAM()
+        {
+            this.CTHD = new HashSet<CTHD>();
+        }
+    
         public int ID { get; set; }
         public string TenSP { get; set; }
         public string SoLuong { get; set; }
@@ -24,9 +30,12 @@ namespace DoAn.Models
         public Nullable<int> Gia { get; set; }
         public string GiaKM { get; set; }
         public Nullable<int> DMSP_ID { get; set; }
-        public string TieuDeSeo { get; set; }
         public Nullable<int> Moi { get; set; }
+        public string TieuDeSeo { get; set; }
+        public string Alias { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD> CTHD { get; set; }
         public virtual DMSP DMSP { get; set; }
     }
 }

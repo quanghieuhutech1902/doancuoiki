@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.2.5\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -193,19 +197,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\ConfigWeb.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\admin\Controllers\CHAMSOCsController.cs" />
+    <Compile Include="Areas\admin\Controllers\CHINHSACHesController.cs" />
+    <Compile Include="Areas\admin\Controllers\CTHDsController.cs" />
+    <Compile Include="Areas\admin\Controllers\DMCHAMSOCsController.cs" />
+    <Compile Include="Areas\admin\Controllers\DMCHINHSACHesController.cs" />
+    <Compile Include="Areas\admin\Controllers\DMKMsController.cs" />
     <Compile Include="Areas\admin\Controllers\DMSPsController.cs" />
     <Compile Include="Areas\admin\Controllers\DMTTsController.cs" />
-    <Compile Include="Areas\admin\DMCHAMSOCsController.cs" />
+    <Compile Include="Areas\admin\Controllers\FOOTERsController.cs" />
+    <Compile Include="Areas\admin\Controllers\GIOITHIEUxController.cs" />
+    <Compile Include="Areas\admin\Controllers\HOADONsController.cs" />
+    <Compile Include="Areas\admin\Controllers\KHACHHANGsController.cs" />
+    <Compile Include="Areas\admin\Controllers\TINTUCsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -273,9 +289,6 @@
       <DependentUpon>WenBanCayModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Slide.cs">
-      <DependentUpon>WenBanCayModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>WenBanCayModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TINTUC.cs">
@@ -1907,6 +1920,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\Style.css" />
+    <Content Include="Content\fonts\font-awesome.min.css" />
     <Content Include="Content\HinhAnhSP\1.png" />
     <Content Include="Content\HinhAnhSP\2.png" />
     <Content Include="Content\HinhAnhSP\3.png" />
@@ -2172,6 +2186,62 @@
     <Content Include="Models\WenBanCayModel.edmx.diagram">
       <DependentUpon>WenBanCayModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\UTMHelvetIns.ttf" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\css\fonts\UTMHelvetIns.ttf" />
+    <Content Include="Areas\admin\Views\TINTUCs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\TINTUCs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\TINTUCs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\TINTUCs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\TINTUCs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\CHAMSOCs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\CHAMSOCs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\CHAMSOCs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\CHAMSOCs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\CHAMSOCs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\CHINHSACHes\Create.cshtml" />
+    <Content Include="Areas\admin\Views\CHINHSACHes\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\CHINHSACHes\Details.cshtml" />
+    <Content Include="Areas\admin\Views\CHINHSACHes\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\CHINHSACHes\Index.cshtml" />
+    <Content Include="Areas\admin\Views\CTHDs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\CTHDs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\CTHDs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\CTHDs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\CTHDs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\DMCHINHSACHes\Create.cshtml" />
+    <Content Include="Areas\admin\Views\DMCHINHSACHes\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\DMCHINHSACHes\Details.cshtml" />
+    <Content Include="Areas\admin\Views\DMCHINHSACHes\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\DMCHINHSACHes\Index.cshtml" />
+    <Content Include="Areas\admin\Views\DMKMs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\DMKMs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\DMKMs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\DMKMs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\DMKMs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\FOOTERs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\FOOTERs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\FOOTERs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\FOOTERs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\FOOTERs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\GIOITHIEUx\Create.cshtml" />
+    <Content Include="Areas\admin\Views\GIOITHIEUx\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\GIOITHIEUx\Details.cshtml" />
+    <Content Include="Areas\admin\Views\GIOITHIEUx\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\GIOITHIEUx\Index.cshtml" />
+    <Content Include="Areas\admin\Views\HOADONs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\HOADONs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\HOADONs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\HOADONs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\HOADONs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\LoadDonHangTheoMKH.cshtml" />
+    <Content Include="Areas\admin\Views\KHACHHANGs\LoadChiTietHoaDonTheoMHD.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -2228,10 +2298,14 @@
     <Content Include="Views\PartialView\DMCSPartial.cshtml" />
     <Content Include="Views\PartialView\BaiVietCCPartial.cshtml" />
     <Content Include="Views\PartialView\XemChiTiet.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\XemChiTiet.cshtml" />
+    <Content Include="Views\Products\GetProductByDMSP_ID.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Models\" />
+    <Folder Include="Areas\admin\Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

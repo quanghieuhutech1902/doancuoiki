@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DoAn.Models.CTHD>
+
+<div class="row" style="margin-left:10px">
+
+    <div class="col-sm-12">
+        <hr color="red" size="40px" />
+        <h2>Khách Hàng</h2>
+
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Số Lượng
+                </th>
+                <th>
+                    Mô Tả
+                </th>
+                <th>
+                    Tên Sản Phẩm
+                </th>
+                
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SL)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HOADON.Mota)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SANPHAM.TenSP)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

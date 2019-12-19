@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DoAn.Models.DMKM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+
+
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>DANH SÁCH DANH MỤC CHÍNH SÁCH</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/dmkms/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Tên Khuyến Mãi
+                </th>
+                <th>
+                    Từ Khóa
+                </th>
+                <th>
+                    Tiêu Đề Seo
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenKM)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TuKhoa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TieuDeSeo)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/dmkms/edit/@item.ID"><i class="fa fa-edit"></i></a> |
+
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/dmkms/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

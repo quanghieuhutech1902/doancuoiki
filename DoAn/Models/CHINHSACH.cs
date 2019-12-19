@@ -20,6 +20,7 @@ namespace DoAn.Models
         public string TuKhoa { get; set; }
         public Nullable<int> CHNHSACH_ID { get; set; }
         public string TieuDeSeo { get; set; }
+        public string Alias { get; set; }
     
         public virtual DMCHINHSACH DMCHINHSACH { get; set; }
     }

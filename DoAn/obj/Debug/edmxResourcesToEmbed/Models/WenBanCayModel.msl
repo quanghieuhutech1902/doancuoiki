@@ -4,63 +4,242 @@
     <EntitySetMapping Name="CHAMSOC">
       <EntityTypeMapping TypeName="WebCayCanhModel.CHAMSOC">
         <MappingFragment StoreEntitySet="CHAMSOC">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenCachChamSoc" ColumnName="TenCachChamSoc" />
-          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-          <ScalarProperty Name="CS_ID" ColumnName="CS_ID" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
           <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="CS_ID" ColumnName="CS_ID" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="TenCachChamSoc" ColumnName="TenCachChamSoc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CHINHSACH">
       <EntityTypeMapping TypeName="WebCayCanhModel.CHINHSACH">
         <MappingFragment StoreEntitySet="CHINHSACH">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenChinhSach" ColumnName="TenChinhSach" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-          <ScalarProperty Name="CHNHSACH_ID" ColumnName="CHNHSACH_ID" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
           <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="CHNHSACH_ID" ColumnName="CHNHSACH_ID" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="TenChinhSach" ColumnName="TenChinhSach" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CTHD">
       <EntityTypeMapping TypeName="WebCayCanhModel.CTHD">
         <MappingFragment StoreEntitySet="CTHD">
+          <ScalarProperty Name="HoaDonID" ColumnName="HoaDonID" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="SanPhamID" ColumnName="SanPhamID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="SanPham" ColumnName="SanPham" />
-          <ScalarProperty Name="KhachHang" ColumnName="KhachHang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DMCHAMSOC">
       <EntityTypeMapping TypeName="WebCayCanhModel.DMCHAMSOC">
         <MappingFragment StoreEntitySet="DMCHAMSOC">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenDM" ColumnName="TenDM" />
-          <ScalarProperty Name="Tukhoa" ColumnName="Tukhoa" />
           <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="Tukhoa" ColumnName="Tukhoa" />
+          <ScalarProperty Name="TenDM" ColumnName="TenDM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DMCHINHSACH">
       <EntityTypeMapping TypeName="WebCayCanhModel.DMCHINHSACH">
         <MappingFragment StoreEntitySet="DMCHINHSACH">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenDM" ColumnName="TenDM" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
           <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="TenDM" ColumnName="TenDM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DMKM">
       <EntityTypeMapping TypeName="WebCayCanhModel.DMKM">
         <MappingFragment StoreEntitySet="DMKM">
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
           <ScalarProperty Name="TenKM" ColumnName="TenKM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DMTT">
+      <EntityTypeMapping TypeName="WebCayCanhModel.DMTT">
+        <MappingFragment StoreEntitySet="DMTT">
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="NgayCN" ColumnName="NgayCN" />
+          <ScalarProperty Name="TenDMTT" ColumnName="TenDMTT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FOOTER">
+      <EntityTypeMapping TypeName="WebCayCanhModel.FOOTER">
+        <MappingFragment StoreEntitySet="FOOTER">
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HINHANH">
+      <EntityTypeMapping TypeName="WebCayCanhModel.HINHANH">
+        <MappingFragment StoreEntitySet="HINHANH">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADON">
+      <EntityTypeMapping TypeName="WebCayCanhModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="SoLuongDonHang" ColumnName="SoLuongDonHang" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="PTTTID" ColumnName="PTTTID" />
+          <ScalarProperty Name="KhachHangID" ColumnName="KhachHangID" />
+          <ScalarProperty Name="NhanVienID" ColumnName="NhanVienID" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HUONGDAN">
+      <EntityTypeMapping TypeName="WebCayCanhModel.HUONGDAN">
+        <MappingFragment StoreEntitySet="HUONGDAN">
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANG">
+      <EntityTypeMapping TypeName="WebCayCanhModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHUYENMAI">
+      <EntityTypeMapping TypeName="WebCayCanhModel.KHUYENMAI">
+        <MappingFragment StoreEntitySet="KHUYENMAI">
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="MDKM_ID" ColumnName="MDKM_ID" />
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="TenKM" ColumnName="TenKM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIENHE">
+      <EntityTypeMapping TypeName="WebCayCanhModel.LIENHE">
+        <MappingFragment StoreEntitySet="LIENHE">
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGUOIDUNG">
+      <EntityTypeMapping TypeName="WebCayCanhModel.NGUOIDUNG">
+        <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHANHOI">
+      <EntityTypeMapping TypeName="WebCayCanhModel.PHANHOI">
+        <MappingFragment StoreEntitySet="PHANHOI">
+          <ScalarProperty Name="Noidung" ColumnName="Noidung" />
+          <ScalarProperty Name="HoaDonId" ColumnName="HoaDonId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTTT">
+      <EntityTypeMapping TypeName="WebCayCanhModel.PTTT">
+        <MappingFragment StoreEntitySet="PTTT">
+          <ScalarProperty Name="TenPTTT" ColumnName="TenPTTT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SANPHAM">
+      <EntityTypeMapping TypeName="WebCayCanhModel.SANPHAM">
+        <MappingFragment StoreEntitySet="SANPHAM">
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="Moi" ColumnName="Moi" />
+          <ScalarProperty Name="DMSP_ID" ColumnName="DMSP_ID" />
+          <ScalarProperty Name="GiaKM" ColumnName="GiaKM" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slide">
+      <EntityTypeMapping TypeName="WebCayCanhModel.Slide">
+        <MappingFragment StoreEntitySet="Slide">
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="TIeuDeSeo" ColumnName="TIeuDeSeo" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="ThuTu" ColumnName="ThuTu" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINTUC">
+      <EntityTypeMapping TypeName="WebCayCanhModel.TINTUC">
+        <MappingFragment StoreEntitySet="TINTUC">
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="DMTT_ID" ColumnName="DMTT_ID" />
+          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="TenTinTuc" ColumnName="TenTinTuc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIOITHIEU">
+      <EntityTypeMapping TypeName="WebCayCanhModel.GIOITHIEU">
+        <MappingFragment StoreEntitySet="GIOITHIEU">
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
           <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
           <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -68,193 +247,12 @@
       <EntityTypeMapping TypeName="WebCayCanhModel.DMSP">
         <MappingFragment StoreEntitySet="DMSP">
           <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
           <ScalarProperty Name="XoaTam" ColumnName="XoaTam" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DMTT">
-      <EntityTypeMapping TypeName="WebCayCanhModel.DMTT">
-        <MappingFragment StoreEntitySet="DMTT">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenDMTT" ColumnName="TenDMTT" />
-          <ScalarProperty Name="NgayCN" ColumnName="NgayCN" />
-          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
           <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
           <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="FOOTER">
-      <EntityTypeMapping TypeName="WebCayCanhModel.FOOTER">
-        <MappingFragment StoreEntitySet="FOOTER">
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GIOITHIEU">
-      <EntityTypeMapping TypeName="WebCayCanhModel.GIOITHIEU">
-        <MappingFragment StoreEntitySet="GIOITHIEU">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Ten" ColumnName="Ten" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HINHANH">
-      <EntityTypeMapping TypeName="WebCayCanhModel.HINHANH">
-        <MappingFragment StoreEntitySet="HINHANH">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="image" ColumnName="image" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HOADON">
-      <EntityTypeMapping TypeName="WebCayCanhModel.HOADON">
-        <MappingFragment StoreEntitySet="HOADON">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
-          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-          <ScalarProperty Name="NhanVien" ColumnName="NhanVien" />
-          <ScalarProperty Name="KhachHang" ColumnName="KhachHang" />
-          <ScalarProperty Name="CTHD_ID" ColumnName="CTHD_ID" />
-          <ScalarProperty Name="PTTT" ColumnName="PTTT" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HUONGDAN">
-      <EntityTypeMapping TypeName="WebCayCanhModel.HUONGDAN">
-        <MappingFragment StoreEntitySet="HUONGDAN">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="KHACHHANG">
-      <EntityTypeMapping TypeName="WebCayCanhModel.KHACHHANG">
-        <MappingFragment StoreEntitySet="KHACHHANG">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
-          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
-          <ScalarProperty Name="Diem" ColumnName="Diem" />
-          <ScalarProperty Name="SDT" ColumnName="SDT" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="KHUYENMAI">
-      <EntityTypeMapping TypeName="WebCayCanhModel.KHUYENMAI">
-        <MappingFragment StoreEntitySet="KHUYENMAI">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenKM" ColumnName="TenKM" />
-          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-          <ScalarProperty Name="MDKM_ID" ColumnName="MDKM_ID" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="LIENHE">
-      <EntityTypeMapping TypeName="WebCayCanhModel.LIENHE">
-        <MappingFragment StoreEntitySet="LIENHE">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NGUOIDUNG">
-      <EntityTypeMapping TypeName="WebCayCanhModel.NGUOIDUNG">
-        <MappingFragment StoreEntitySet="NGUOIDUNG">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
-          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PHANHOI">
-      <EntityTypeMapping TypeName="WebCayCanhModel.PHANHOI">
-        <MappingFragment StoreEntitySet="PHANHOI">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="HoaDonId" ColumnName="HoaDonId" />
-          <ScalarProperty Name="Noidung" ColumnName="Noidung" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PTTT">
-      <EntityTypeMapping TypeName="WebCayCanhModel.PTTT">
-        <MappingFragment StoreEntitySet="PTTT">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenPTTT" ColumnName="TenPTTT" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SANPHAM">
-      <EntityTypeMapping TypeName="WebCayCanhModel.SANPHAM">
-        <MappingFragment StoreEntitySet="SANPHAM">
-          <ScalarProperty Name="Moi" ColumnName="Moi" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
-          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-          <ScalarProperty Name="Mota" ColumnName="Mota" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="Gia" ColumnName="Gia" />
-          <ScalarProperty Name="GiaKM" ColumnName="GiaKM" />
-          <ScalarProperty Name="DMSP_ID" ColumnName="DMSP_ID" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Slide">
-      <EntityTypeMapping TypeName="WebCayCanhModel.Slide">
-        <MappingFragment StoreEntitySet="Slide">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
-          <ScalarProperty Name="ThuTu" ColumnName="ThuTu" />
-          <ScalarProperty Name="Link" ColumnName="Link" />
-          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="TIeuDeSeo" ColumnName="TIeuDeSeo" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="WebCayCanhModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TINTUC">
-      <EntityTypeMapping TypeName="WebCayCanhModel.TINTUC">
-        <MappingFragment StoreEntitySet="TINTUC">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="TenTinTuc" ColumnName="TenTinTuc" />
-          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
-          <ScalarProperty Name="TuKhoa" ColumnName="TuKhoa" />
-          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-          <ScalarProperty Name="DMTT_ID" ColumnName="DMTT_ID" />
-          <ScalarProperty Name="TieuDeSeo" ColumnName="TieuDeSeo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

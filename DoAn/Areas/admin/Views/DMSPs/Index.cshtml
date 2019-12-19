@@ -5,48 +5,58 @@
     Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>DANH SÁCH DANH MỤC SẢN PHẨM</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/dmsps/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Tên Loại Cây
+                </th>
+                <th>
+                    Tên Tiêu Đề Seo
+                </th>
+                <th>
+                    Từ Khóa
+                </th>
+                <th>
+                    Xóa Tạm
+                </th>
+                <th>
+                    Hình Ảnh
+                </th>
+                <th></th>
+            </tr>
 
-<p>
-    @Html.ActionLink("Thêm Mới", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            Tên Loại Cây
-        </th>
-        <th>
-            Tieu Đề Seo
-        </th>
-        <th>
-           Từ Khóa
-        </th>
-        <th>
-           Xóa Tạm
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenLoai)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TieuDeSeo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TuKhoa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XoaTam)
+                    </td>
+                    <td>
+                        <img src="@item.HinhAnh" width="100" />
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/dmsps/edit/@item.ID"><i class="fa fa-edit"></i></a> |
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenLoai)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TieuDeSeo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TuKhoa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.XoaTam)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/dmsps/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
 
-</table>
+        </table>
+    </div>
+</div>
+
+

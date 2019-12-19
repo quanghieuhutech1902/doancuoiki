@@ -1,0 +1,68 @@
+﻿@model IEnumerable<DoAn.Models.CHINHSACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>DANH SÁCH CHÍNH SÁCH</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/admin/chinhsaches/Create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                   Tên Chính Sách
+                </th>
+                <th>
+                    Nội Dung
+                </th>
+                <th>
+                    Từ Khóa
+                </th>
+                <th>
+                    Tiêu Đề Seo
+                </th>
+                <th>
+                    Alias
+                </th>
+                <th>
+                    Tên Danh Mục
+                </th>
+                
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenChinhSach)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoiDung)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TuKhoa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TieuDeSeo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Alias)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DMCHINHSACH.TenDM)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/chinhsaches/edit/@item.ID"><i class="fa fa-edit"></i></a> |
+
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/chinhsaches/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

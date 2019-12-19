@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DoAn.Models.KHACHHANG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>Khách Hàng</h2>
+        
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Tên Khách Hàng
+                </th>
+                <th>
+                    Địa Chỉ
+                </th>
+                <th>
+                    Gmail
+                </th>
+                <th>
+                    Điểm
+                </th>
+                <th>
+                    Số Điện Thoại
+                </th>
+                
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenKH)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiaChi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Diem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SDT)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/khachhangs/edit/@item.ID"><i class="fa fa-edit"></i></a> 
+
+                        
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

@@ -14,11 +14,20 @@ namespace DoAn.Models
     
     public partial class KHACHHANG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KHACHHANG()
+        {
+            this.HOADON = new HashSet<HOADON>();
+        }
+    
         public int ID { get; set; }
         public string TenKH { get; set; }
         public string DiaChi { get; set; }
         public string Gmail { get; set; }
         public Nullable<int> Diem { get; set; }
         public string SDT { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOADON> HOADON { get; set; }
     }
 }

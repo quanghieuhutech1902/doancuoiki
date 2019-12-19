@@ -26,6 +26,7 @@ namespace DoAn.Models
         public string MoTa { get; set; }
         public string TuKhoa { get; set; }
         public string TieuDeSeo { get; set; }
+        public string Alias { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TINTUC> TINTUC { get; set; }

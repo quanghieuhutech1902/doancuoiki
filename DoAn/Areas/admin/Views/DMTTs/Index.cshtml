@@ -4,55 +4,50 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="row" style="margin-left:10px">
+    <div class="col-sm-12">
+        <h2>DANH SÁCH DANH MỤC TIN TỨC</h2>
+        <p><a class="btn btn-success" style="border-radius:0" href="/Admin/dmtts/create">THÊM MỚI</a></p>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Tên Loại Tin Tức
+                </th>
+                <th>
+                    Mô tả
+                </th>
+                <th>
+                    Từ Khóa
+                </th>
+                <th>
+                    Tiêu Đề Seo
+                </th>
+                <th></th>
+            </tr>
 
-<h2>Index</h2>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenDMTT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MoTa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TuKhoa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TieuDeSeo)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-xs" style="border-radius:0" href="/Admin/dmtts/edit/@item.ID"><i class="fa fa-edit"></i></a> |
 
-<p>
-    @Html.ActionLink("Thêm Mới", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-          Tên Loại Tin Tức
-        </th>
-        <th>
-           Ngày Cập Nhật
-        </th>
-        <th>
-          Mô tả
-        </th>
-        <th>
-          Từ Khóa
-        </th>
-        <th>
-           Tiêu Đề Seo
-        </th>
-        <th></th>
-    </tr>
+                        <a class="btn btn-danger btn-xs" style="border-radius:0" href="/Admin/dmtts/delete/@item.ID"><i class="fa fa-recycle"></i></a>
+                    </td>
+                </tr>
+            }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenDMTT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayCN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MoTa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TuKhoa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TieuDeSeo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-           
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+        </table>
+    </div>
+</div>
